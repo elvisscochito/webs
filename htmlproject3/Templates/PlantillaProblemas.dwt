@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Documento sin título</title>
+<!-- TemplateEndEditable -->
+<style type="text/css">
+body {
+	background-image: url(../imagenes/lluvia.jpg);
+	background-color: #666;
+	text-align: center;
+}
+.temas {
+	font-weight: bold;
+	font-size: 36px;
+	text-align: center;
+	color: #FFF;
+}
+.piepagina {
+	color: #FFF;
+	text-align: center;
+	font-size: 18px;
+}
+.titulo {
+	text-align: center;
+	font-size: 36px;
+	font-weight: bold;
+	color: #FFF;
+}
+.piepagina table tr td {
+	font-size: 18px;
+	text-align: center;
+}
+.contenido {
+	text-align: center;
+	font-weight: bold;
+}
+.derechos {
+	font-weight: bold;
+}
+</style>
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+<table width="1000" border="1" align="center" cellpadding="8" cellspacing="0">
+  <tr>
+    <td bgcolor="#7F0000"><p>&nbsp;</p>
+    <p class="titulo">PROBLEMAS <!-- TemplateBeginEditable name="complemento" -->JUVENTILES<!-- TemplateEndEditable --></p></td>
+  </tr>
+  <tr>
+    <td bgcolor="#666666" class="temas"><!-- TemplateBeginEditable name="temas" -->/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Drogadicción&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deserción escolar&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/<!-- TemplateEndEditable --></td>
+  </tr>
+  <tr>
+    <td bgcolor="#FFFFFF" class="contenido"><!-- TemplateBeginEditable name="contenido" -->contenido<!-- TemplateEndEditable --></td>
+  </tr>
+  <tr>
+    <td bgcolor="#333333" class="piepagina"><table width="800" border="1" align="center" cellpadding="8" cellspacing="0">
+      <tr>
+        <td>Contactanos en</td>
+        <td><img src="../imagenes/facebook.png" width="50" height="50" /><img src="../imagenes/instagram.png" width="50" height="50" /><img src="../imagenes/twitter.png" width="50" height="50" /></td>
+        <td>como: <!-- TemplateBeginEditable name="nombre" -->nombre<!-- TemplateEndEditable --></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td bgcolor="#7F0000" class="piepagina"><span class="derechos">Plantilla Registrada Elviro Dominguez Soriano 4°&quot;A&quot; © 2019</span></td>
+  </tr>
+</table>
+</body>
+</html>
