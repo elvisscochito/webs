@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<site SitePrefVersionMajor="12" SitePrefVersionMinor="0">
+    <localinfo sitename="elviro_dominguez" ftporrdsserver="FALSE" mediaqueryfile="" localroot="C:%5Cwamp%5Cwww%5Celviro_dominguez%5C" assetfolder="C:%5Cwamp%5Cwww%5Celviro_dominguez%5CSpryAssets%5C" webfontsfolder="C:%5Cwamp%5Cwww%5Celviro_dominguez%5Cwebfonts%5C" imagefolder="C:%5Cwamp%5Cwww%5Celviro_dominguez%5Cimagenes%5C" spacerfilepath="" refreshlocal="TRUE" rewritedocrellinks="FALSE" cache="TRUE" httpaddress="http://localhost/elviro_dominguez/" relativeTo="DOCUMENT" caseSensitiveLinks="FALSE" curserver="webserver"/>
+    <designnotes usedesignnotes="TRUE" sharedesignnotes="FALSE"/>
+    <sitemap homepage="" pagesperrow="200" columnwidth="125" showdependentfiles="FALSE" showpagetitles="FALSE" showhiddenfiles="FALSE"/>
+    <bcinfo siteid="0" sitename="" secureURL=""/>
+    <fileviewcolumns sharecolumns="FALSE">
+        <column name="Local%20Files" align="left" show="TRUE" share="FALSE" builtin="TRUE" localwidth="80" remotewidth="180"/>
+        <column name="Notes" align="center" show="FALSE" share="FALSE" builtin="TRUE" localwidth="36" remotewidth="36"/>
+        <column name="Size" align="right" show="TRUE" share="FALSE" builtin="TRUE" localwidth="-2" remotewidth="-2"/>
+        <column name="Type" align="left" show="TRUE" share="FALSE" builtin="TRUE" localwidth="60" remotewidth="60"/>
+        <column name="Modified" align="left" show="TRUE" share="FALSE" builtin="TRUE" localwidth="102" remotewidth="102"/>
+        <column name="Checked%20Out%20By" align="left" show="TRUE" share="FALSE" builtin="TRUE" localwidth="-1" remotewidth="-1"/>
+</fileviewcolumns>
+    <serverlist>
+        <server servermodel="PHP%20MySQL" servertype="remoteAndTestingServer" weburl="http://localhost/elviro_dominguez/" connectionsmigrated="FALSE" serverobjectsversion="1" defaultdoctype="HTML" accesstype="lan" remoteroot="C:/wamp/www/elviro_dominguez/" name="elviro_dominguez" maintainSyncInfo="TRUE" autoUpload="FALSE" enablecheckin="FALSE" checkoutname="" checkoutwhenopen="TRUE" emailaddress="" refreshremote="FALSE" testsvrbinaccesstype="none"/>
+</serverlist>
+    <cloaking enabled="TRUE" patterns="FALSE">
+        <cloakedfolder folder="dw_php_codehinting.config"/>
+        <cloakedpattern pattern=".fla"/>
+        <cloakedpattern pattern=".psd"/>
+</cloaking>
+    <contributorintegration enabled="FALSE"/>
+</site>
