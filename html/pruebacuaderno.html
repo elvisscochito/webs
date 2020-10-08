@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>PRUEBACUADERNO</title>
+<head>
+
+	<body bgcolor="gray">
+	<fieldset>
+	<legend>Datos b&aacute;sicos</legend>
+		<b>Nombre</b>
+		<br>
+		<input type="text" name="nombre"><br>
+		<br>
+
+		<b>Descripcci&oacute;n</b>
+		<br>
+		<textarea name="comentarios" rows="10" cols="40" placeholder="Escribe aqu&iacute; tus comentarios"></textarea>
+		<br>
+		<br>
+		
+		<b>Foto</b><input type="file" name="adjunto" size="5">
+		<br>
+		<br>
+		<input name="casilla" type="checkbox" value="vivitas">A&ntilde;adir contador de visitas<br>
+	</fieldset>
+
+
+	<fieldset>
+	<legend>Datos econ&oacute;micos</legend>
+		<b>Precio</b><input type="text" name="precio" size="3">&euro;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="impuestos">Impuestos</label>														
+																										<select id="impuestos" name="impuestos">
+																											<option value="14">4&#37;</option>
+																											<option value="7">7&#37;</option>
+																											<option value="16">16&#37;</option>
+																											<option value="25">25&#37;</option>
+																										</select>
+		<br>
+		<br>
+	<b>Promoci&oacute;n</b>
+	<br>
+		<input type="radio" name="promocion" value="ninguno" checked="checked">Ninguno<br>
+		<input type="radio" name="promocion" value="transporte">Transporte gratuito<br>
+		<input type="radio" name="promocion" value="descuento">Descuento 5&#37;<br>
+	</body>
+</html>
