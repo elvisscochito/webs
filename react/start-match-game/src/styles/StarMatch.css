@@ -1,0 +1,40 @@
+.game {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.body {
+    display: flex;
+}
+
+.help {
+    color: hsl(0, 0%, 40%);
+    margin: 10px;
+    text-align: center;
+}
+
+.left {
+    text-align: center;
+    width: 50%;
+    border: thin solid hsl(0, 0%, 87%);
+}
+
+.right {
+    text-align: center;
+    padding: 10px;
+    width: 50%;
+    border: thin solid hsl(0, 0%, 87%);
+}
+
+.star {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.star::after {
+    content: "\2605";
+    font-size: 45px;
+}
+
+
+
