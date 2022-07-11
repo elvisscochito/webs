@@ -13,9 +13,11 @@
 ## Run
 > node file.js
 
+> node - v <!-- check node version -->
+
 ---
 
-## Docs
+## Notes
 
 * Created for development back-end (data administration and process, databases) web apps
 * Now you can use JavaScript in server side, instead other languages like Java, PHP, Python, etc.
@@ -32,6 +34,7 @@
 * Before you used required to import a module, but nowadays you can used import and export keywords to import and export modules
 * Node have built-in modules, here's some: [link](https://nodejs.org/dist/latest-v16.x/docs/api/ "Node.js"), [link](https://www.w3schools.com/nodejs/ref_modules.asp "w3schools")
 * As you know, node.js allow create servers with http model to request and send data from itself
+* dependencies are project settings meanwhile devDependencies are project tools for development the project itself
 
 ---
 
