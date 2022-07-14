@@ -6,6 +6,7 @@ import morgan from 'morgan';
 
 import about from './routes/about.js';
 import contact from './routes/contact.js';
+import user from './routes/user.js';
 
 /* const hostname = process.env.HOSTNAME || '127.0.0.1'; */
 const port = process.env.PORT || 3000;
@@ -89,9 +90,14 @@ server.get('/home', (req, res) => {
 
 server.use('/', about);
 server.use('/api', contact);
+server.use('/user', user);
 
 server.get('/test', (req, res) => {
-    res.send('<h1>Test</h1>');
+    /* res.send('<h1>Test</h1>'); */
+    /* res.sendStatus(500); */
+    /* res.status(500).send('<h1>Error</h1>'); */
+    /* res.status(500).json({"message": "Error"}); */
+    res.download('index.js');
 });
 
 /** @note express.static is a middleware for access to all static files inside public folder in the client, example: http://localhost:3000/scripts/main.js */

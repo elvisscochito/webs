@@ -10,7 +10,7 @@
 
     <ul>
         <% users.forEach((user) => { %>
-            <li><%= user.id %>, <%= user.fullName.firstName %>, <%= user.email %></li>
+            <li><%= <!-- locals.var || 'Default' (it will always work doesn't matter the name) --> user.id %>, <%= user.fullName.firstName %>, <%= user.email %></li>
         <% });%>
     </ul>
 </body>
