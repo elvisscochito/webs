@@ -1,0 +1,38 @@
+:root {
+    --tertiary-color: lightgray;
+}
+
+/* automatic default dark mode  */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: black;
+        --secondary-color: white;
+    }
+
+    ::selection {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+    }
+}
+
+/* automatic default light mode */
+@media (prefers-color-scheme: light) {
+    :root {
+        --primary-color: white;
+        --secondary-color: black;
+    }
+
+    ::selection {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+    }
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+a {
+    color: var(--tertiary-color);
+}
