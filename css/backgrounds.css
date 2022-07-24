@@ -1,0 +1,110 @@
+section.background div.color {
+    /* fallback color*/
+    background-color: hsl(0, 0%, 70%);
+
+    background-color: hsla(0, 0%, 70%, 0.3);
+}
+
+section.background div.image {
+    width: 1280px;
+    height: 720px;
+
+    background-image: url("https://images.unsplash.com/photo-1623780884264-fff037bf34b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDMxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=900&q=60");
+
+    /* accepts two values x and y offsets (if just one is provided the second one will be default to 50%), with left, right, top, bottom, center or custom sizes measurement such as 20px 10px, remember that will be in relation to the top-left corner. Quick note: left top = 0% 0%, left bottom = 0% 100%, right top = 100% 0% and right bottom = 100 100% */
+    background-position: center;
+
+    /* default */
+    /* background-repeat: repeat; */
+    /* background-repeat: repeat-x;
+    background-repeat: repeat-y; */
+    background-repeat: no-repeat;    
+}
+
+section.background div.shorthand {
+    width: 1280px;
+    height: 720px;
+
+    /* commonly falls as background-color, background-image, background-position, and then background-repeat into the shorthand */
+    background: hsl(0%, 0%, 70%) url("https://images.unsplash.com/photo-1623780884264-fff037bf34b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDMxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=900&q=60") center no-repeat;
+}
+
+section.background div.demo {
+    background: hsl(90,73%,40%)url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/tick_2.png") 20px center no-repeat;
+    border: 2px solid hsl(90, 73%, 27%);
+    border-radius: 5px;
+
+    color: hsl(0, 0%, 100%);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 15px 20px 15px 50px;
+}
+
+
+section.background div.multiple {
+    width: 1280px;
+    height: 720px;
+
+    background: url("https://images.unsplash.com/photo-1623780884264-fff037bf34b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDMxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=900&q=60") no-repeat, url("https://images.unsplash.com/photo-1607354175781-c03c7b8b0f04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDE3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=900&q=60") no-repeat, url("https://images.unsplash.com/photo-1573147367786-a5a227916f0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDI4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=900&q=60") no-repeat;
+}
+
+section.background div.demo-background-gradients {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/tick_2.png") 20px center no-repeat, linear-gradient(hsl(90, 73%, 45%), hsl(90, 73%, 36%));
+    border: 2px solid hsl(90, 73%, 27%);
+    border-radius: 5px;
+
+    color: hsl(0, 0%, 100%);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 15px 20px 15px 50px;
+}
+
+section.background div.sizes div {
+    width: 1280px;
+    height: 720px;
+
+    background: url("https://images.unsplash.com/photo-1557063673-0493e05da49f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60") no-repeat;
+
+    border: 2px dashed  hsl(233, 8%, 62%);
+}
+
+section.background div.sizes div.auto {
+    /* values sizes are in relation to the element’s size, not the background image’s original size. If a second value isn’t provided the height value will be automatically set to preserve the aspect ratio of the background image. Auto 75% will conserved the aspect ratio of the background image too in relation to the height*/
+
+    background-size: auto 75%;
+}
+
+section.background div.sizes div.cover {
+    /*fits it at all but gets zoom, distort and rid of the quality, basically the image will stretch or shrink as necessary to cover the entire element*/
+    background-size: cover;
+}
+
+section.background div.sizes div.contain {
+    /* fits height */
+    background-size: contain;
+}
+
+section.background div.clip-origin {
+    width: 1280px;
+    height: 720px;
+
+    background: url("https://images.unsplash.com/photo-1557063673-0493e05da49f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60") no-repeat;
+
+    border: 15px dashed  hsl(233, 8%, 62%);
+    padding: 20px;
+
+    /* set to padding-box by default  */
+    background-origin: border-box;
+
+    /* set to  border-box by default  */
+    background-clip: padding-box;
+}
+
+section.background div.attachment {
+    width: 300px;
+    height: 400px;
+    overflow-y: scroll;
+    text-align: center;
+    background: url("https://images.unsplash.com/photo-1557063673-0493e05da49f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwcm9maWxlLWxpa2VkfDd8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60") no-repeat;
+
+
+    background-attachment: fixed;
+}

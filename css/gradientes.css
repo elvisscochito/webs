@@ -1,0 +1,38 @@
+section.gradients div {
+    height: 120px;
+    border-radius: 6px;
+    /* fallback background color*/
+    background: hsl(189, 20%, 34%);
+}
+
+section.gradients div.linear {
+    /* by default is from top to bottom, but you can also use: to right or even combined with to right bottom*/
+    background: linear-gradient(hsl(167, 15%, 46%), hsl(206, 32%, 24%));
+}
+
+section.gradients div.linear-right {
+    background: linear-gradient(to right, hsl(167, 15%, 46%), hsl(206, 32%, 24%));
+}
+
+section.gradients div.linear-bottom {
+    background: linear-gradient(to right  bottom, hsl(167, 15%, 46%), hsl(206, 32%, 24%));
+}
+
+section.gradients div.radial {
+    background: radial-gradient(hsl(167, 15%, 46%), hsl(206, 32%, 24%));
+}
+
+section.gradients div.linear-many {
+    /* 85% means degradation position, by default first is 0% and the last one is 100% */
+    background: linear-gradient(to right, hsl(51, 66%, 90%), hsl(167, 15%, 46%) /* 85% */, hsl(206, 32%, 24%));
+}
+
+section.gradients div.demo {
+    background: linear-gradient(hsl(90, 73%, 45%), hsl(90, 73%, 36%));
+    border: 2px solid hsl(90, 73%, 27%);
+    border-radius: 5px;
+
+    color: hsl(0, 0%, 100%);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 15px 20px;
+}
