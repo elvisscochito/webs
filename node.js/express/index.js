@@ -8,6 +8,9 @@ import about from './routes/about.js';
 import contact from './routes/contact.js';
 import user from './routes/user.js';
 
+import middlewareLogger from './middleware/logger-middleware.js';
+import authMiddleware from './middleware/auth-middleware.js';
+
 /* const hostname = process.env.HOSTNAME || '127.0.0.1'; */
 const port = process.env.PORT || 3000;
 
@@ -34,7 +37,7 @@ const port = process.env.PORT || 3000;
 const server = express();
 
 /** @note settings */
-server.set('title', 'Node.js Express');
+server.set('title', 'Node.js Express'); /** @note custom var */
 server.set('port', /* port */ 3000);
 server.set('view engine', 'ejs');
 
@@ -47,10 +50,15 @@ server.set('view engine', 'ejs');
     next();
 }; */
 
+/** @note global middleware */
 /* server.use(logger); */
 
 /** @note morgan, a HTTP request logger middleware */
 server.use(morgan('dev'));
+/** @note allows to read info from forms */
+server.use(express.urlencoded({extended: true}));
+/** @note allows to read/write json data */
+/* app.use (express.json()); */
 
 /** @note all user routes (without params) passed here will be executed the code bellow */
 
@@ -81,10 +89,17 @@ server.get('/ejs', (req, res) => {
         "email": "ian@email.com",
         "phone": 1234567890
     }];
+    /* res.render('index.ejs', {text: "Aa"}); */
+
+    /** @note if names are equal, you can directly short it */
+    /* res.render('index.ejs', {users}); */
+
+    /** @note assignation, different names */
     res.render('index.ejs', {users: database});
 });
 
-server.get('/home', (req, res) => {
+/** @note use logger middleware just in a specific route */
+server.get('/home', /* logger, */ (req, res) => {
     res.send('<h1>Hello world from Node.js Express framework</h1>');
 });
 
@@ -98,6 +113,34 @@ server.get('/test', (req, res) => {
     /* res.status(500).send('<h1>Error</h1>'); */
     /* res.status(500).json({"message": "Error"}); */
     res.download('index.js');
+});
+
+/* server.get('/test-middleware-home', (req, res, next) => {
+    console.log('Home page');
+    res.send('<h1>Home page</h1>');
+    next(); */ /** @note access to next middleware before get it */
+/* }); */
+
+/* function middlewareLoggerLocal(req, res, next) {
+    console.log('Before');
+    next();
+    console.log('After');
+}; */
+
+ /** @note global middleware just from here to bottom */
+/* server.use(middlewareLoggerLocal); */
+server.use(middlewareLogger);
+
+server.get('/test-middleware-home', (req, res) => {
+    console.log('Home page');
+    res.send('<h1>Home page</h1>');
+});
+
+ /** @note use middleware just in a specific route */
+server.get('/test-middleware-user', authMiddleware, (req, res) => {
+    console.log(`User is admin = ${req.admin}`);
+    console.log('User page');
+    res.send('<h1>User page</h1>');
 });
 
 /** @note express.static is a middleware for access to all static files inside public folder in the client, example: http://localhost:3000/scripts/main.js */

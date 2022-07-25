@@ -41,6 +41,7 @@ server.get('/', (req, res) => {
 });
 
 server.get('/user', (req, res) => {
+    /** @note get all user list */
     res.json({
         "id": "1",
         "fullName": {
@@ -50,6 +51,11 @@ server.get('/user', (req, res) => {
         "email": "david@email.com",
         "phone": 1234567890
     });
+});
+
+server.get('/user/:id', (req, res) => {
+    console.log(req.params.id);
+    res.send(`User ${req.params.id} was get successfully`);
 });
 
 /**
