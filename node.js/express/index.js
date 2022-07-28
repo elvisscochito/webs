@@ -55,7 +55,7 @@ server.set('view engine', 'ejs');
 
 /** @note morgan, a HTTP request logger middleware */
 server.use(morgan('dev'));
-/** @note allows to read info from forms */
+/** @note allows to read info from forms (must be at the top for functional reasons) */
 server.use(express.urlencoded({extended: true}));
 /** @note allows to read/write json data */
 /* app.use (express.json()); */
@@ -91,7 +91,7 @@ server.get('/ejs', (req, res) => {
     }];
     /* res.render('index.ejs', {text: "Aa"}); */
 
-    /** @note if names are equal, you can directly short it */
+    /** @note if names are equal, you can directly short it, users means database */
     /* res.render('index.ejs', {users}); */
 
     /** @note assignation, different names */
