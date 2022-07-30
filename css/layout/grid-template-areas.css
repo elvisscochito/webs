@@ -18,8 +18,12 @@ body {
     display: grid;
     grid-template-areas:
         "header header header"
+        /* "header . ." */
         "nav nav nav"
+        /* "nav . ." */
         "main main main"
+        /* "main . ." */
+        /* "footer . ." */
         "footer footer footer";
     gap: 10px;
     background-color: black;

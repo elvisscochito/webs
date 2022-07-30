@@ -1,18 +1,19 @@
-section.grid, section.grid-gaps, section.grid-lines {
+section.grid, section.grid-gaps, section.grid-lines, section.grid-area {
     display: grid;
     grid-template-columns: auto auto auto;
-    background-color: hsl(39, 100%, 50%);
+    background-color: hsl(0, 0%, 83%);
 }
 
- section.inline-grid  {
+section.inline-grid  {
     display: inline-grid;
     grid-template-columns: auto auto auto;
     background-color: hsl(39, 100%, 50%);
 }
 
-section.grid .item, section.inline-grid .item, section.grid-gaps .item, section.grid-lines .item {
+section.grid .item, section.inline-grid .item, section.grid-gaps .item, section.grid-lines .item, section.grid-area .item {
     border: 1px solid hsla(0, 0%, 0%, 0.3);
     text-align: center;
+    background-color: hsl(39, 100%, 50%);
 }
 
 section.grid-gaps {
@@ -21,12 +22,23 @@ section.grid-gaps {
     gap: 10px;
 }
 
-section.grid-lines .item1 {
-    grid-column-start: 1;
-    grid-column-end: 4;
+section.grid-lines div:first-child {
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    /* grid-column: 1 / 4; */
+
+    /* fill 3 columns */
+    grid-column: 1 / span 3;
 }
 
-section.grid-lines .item2 {
-    grid-row-start: 2;
-    grid-row-end: 6;
+section.grid-lines div:nth-child(2) {
+    /* grid-row-start: 2;
+    grid-row-end: 6; */
+
+    grid-row: 2 / 6;
+}
+
+section.grid-area div:first-child {
+    /* row start / column start / row end / column end */
+    grid-area: 1 / 2 / 5 / 5;
 }

@@ -65,6 +65,10 @@ section.justify-content div.space-between {
     justify-content: space-between;
 }
 
+section.justify-content div.space-evenly {
+    justify-content: space-evenly;
+}
+
 /* section.align-items div.center {
     default
     align-items: stretch;
@@ -108,7 +112,7 @@ section.align-content div.properties {
     align-content: flex-end;
 }
 
-section.flex-direction div.row div.item, section.flex-direction div.row-reverse div.item, section.flex-direction div.column div.item, section.flex-direction div.column-reverse div.item, section.wrap div.nowrap div.item, section.wrap div.wrap div.item, section.wrap div.wrap-reverse div.item, section.flex-flow div div.item, section.justify-content div.center div.item, section.justify-content div.flex-start div.item, section.justify-content div.flex-end div.item, section.justify-content div.space-around div.item, section.justify-content div.space-between div.item, section.align-items div.stretch div.item, section.align-items div.center div.item, section.align-items div.start div.item, section.align-items div.end div.item, section.align-items div.baseline div.item, section.align-content div.properties div.item, section.order div.items div.item, section.grow div.items div.item, section.shrink div.items div.item, section.basis div.items div.item, section.flex div.items div.item {
+section.flex-direction div.row div.item, section.flex-direction div.row-reverse div.item, section.flex-direction div.column div.item, section.flex-direction div.column-reverse div.item, section.wrap div.nowrap div.item, section.wrap div.wrap div.item, section.wrap div.wrap-reverse div.item, section.flex-flow div div.item, section.justify-content div.center div.item, section.justify-content div.flex-start div.item, section.justify-content div.flex-end div.item, section.justify-content div.space-around div.item, section.justify-content div.space-between div.item, section.justify-content div.space-evenly, section.align-items div.stretch div.item, section.align-items div.center div.item, section.align-items div.start div.item, section.align-items div.end div.item, section.align-items div.baseline div.item, section.align-content div.properties div.item, section.order div.items div.item, section.grow div.items div.item, section.shrink div.items div.item, section.basis div.items div.item, section.flex div.items div.item {
     background-color: hsl(0, 0%, 83%);
     text-align: center;
     outline: 1px solid hsla(0, 0%, 0%, 0.3);
