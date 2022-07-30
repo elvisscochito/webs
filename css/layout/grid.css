@@ -1,0 +1,32 @@
+section.grid, section.grid-gaps, section.grid-lines {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: hsl(39, 100%, 50%);
+}
+
+ section.inline-grid  {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    background-color: hsl(39, 100%, 50%);
+}
+
+section.grid .item, section.inline-grid .item, section.grid-gaps .item, section.grid-lines .item {
+    border: 1px solid hsla(0, 0%, 0%, 0.3);
+    text-align: center;
+}
+
+section.grid-gaps {
+    /* column-gap: 10px;
+    row-gap: 10px; */
+    gap: 10px;
+}
+
+section.grid-lines .item1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+section.grid-lines .item2 {
+    grid-row-start: 2;
+    grid-row-end: 6;
+}

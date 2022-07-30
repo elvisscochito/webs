@@ -1,0 +1,32 @@
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "main main main"
+        "footer footer footer";
+    gap: 10px;
+    background-color: black;
+}
+
+header,  nav, main, footer {
+    background-color: lightgray;
+    text-align: center;
+}
+

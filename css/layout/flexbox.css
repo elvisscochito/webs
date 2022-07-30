@@ -1,0 +1,216 @@
+section.flex-direction div, section.wrap div, section.flex-flow div, section.justify-content div.center, section.justify-content div.flex-start, section.justify-content div.flex-end, section.justify-content div.space-around, section.justify-content div.space-between, section.align-items div.stretch, section.align-items div.center, section.align-items div.start, section.align-items div.end, section.align-items div.baseline, section.align-content div.properties, section.order div.items, section.grow div.items, section.shrink div.items, section.basis div.items, section.flex div.items {
+    display: flex;
+    background-color: hsl(0, 0%, 66%);
+    border: 1px solid hsla(0, 0%, 0%, 0.3);
+    padding: 10px;
+}
+
+section.align-items div.stretch, section.align-items div.center, section.align-items div.start, section.align-items div.end, section.align-items div.baseline, section.align-content div.properties, section.order div.items, section.grow div.items, section.shrink div.items, section.basis div.items, section.flex div.items {
+    height: 400px;
+}
+
+section.flex-direction div.row {
+    /* default */
+    flex-direction: row;
+}
+
+section.flex-direction div.row-reverse {
+    flex-direction: row-reverse;
+}
+
+section.flex-direction div.column {
+    flex-direction: column;
+}
+
+section.flex-direction div.column-reverse {
+    flex-direction: column-reverse;
+}
+
+section.wrap div.nowrap {
+    /* default */
+    flex-wrap: nowrap;
+}
+
+section.wrap div.wrap {
+    /* if isn't enough space it will be wrap to adjust */
+    flex-wrap: wrap;
+}
+
+section.wrap div.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+section.flex-flow div {
+    /* flex-direction and flex-wrap in one property */
+    flex-flow: column wrap-reverse;
+}
+
+section.justify-content div.center {
+    justify-content: center;
+}
+
+section.justify-content div.flex-start {
+    justify-content: flex-start;
+}
+
+section.justify-content div.flex-end {
+    justify-content: flex-end;
+}
+
+section.justify-content div.space-around {
+    justify-content: space-around;
+}
+
+section.justify-content div.space-between {
+    justify-content: space-between;
+}
+
+/* section.align-items div.center {
+    default
+    align-items: stretch;
+} */
+
+section.align-items div.center {
+    align-items: center;
+}
+
+section.align-items div.start {
+    align-items: flex-start;
+}
+
+section.align-items div.end {
+    align-items: flex-end;
+}
+
+section.align-items div.baseline div.item:first-child {
+    font-size: 30px;
+}
+
+section.align-items div.baseline div.item:nth-child(2) {
+    font-size: 50px;
+}
+
+section.align-items div.baseline div.item:last-child {
+    font-size: 80px;
+}
+
+section.align-items div.baseline {
+    align-items: baseline;
+}
+
+section.align-content div.properties {
+    flex-wrap: wrap;
+    align-content: space-between;
+    align-content: space-around;
+    align-content: stretch;
+    align-content: center;
+    align-content: flex-start;
+    align-content: flex-end;
+}
+
+section.flex-direction div.row div.item, section.flex-direction div.row-reverse div.item, section.flex-direction div.column div.item, section.flex-direction div.column-reverse div.item, section.wrap div.nowrap div.item, section.wrap div.wrap div.item, section.wrap div.wrap-reverse div.item, section.flex-flow div div.item, section.justify-content div.center div.item, section.justify-content div.flex-start div.item, section.justify-content div.flex-end div.item, section.justify-content div.space-around div.item, section.justify-content div.space-between div.item, section.align-items div.stretch div.item, section.align-items div.center div.item, section.align-items div.start div.item, section.align-items div.end div.item, section.align-items div.baseline div.item, section.align-content div.properties div.item, section.order div.items div.item, section.grow div.items div.item, section.shrink div.items div.item, section.basis div.items div.item, section.flex div.items div.item {
+    background-color: hsl(0, 0%, 83%);
+    text-align: center;
+    outline: 1px solid hsla(0, 0%, 0%, 0.3);
+    padding: 10px;
+    width: 100px;
+}
+
+section.order div.items div.item:first-child {
+    /* order: 1; */
+    order: 4;
+    background-color: red;
+}
+
+section.order div.items div.item:nth-child(2) {
+    /* order: 2; */
+    order: 3;
+    background-color: blue;
+}
+
+section.order div.items div.item:nth-child(3) {
+    /* order: 3; */
+    order: 2;
+    background-color: green;
+}
+
+section.order div.items div.item:last-child {
+    /* order: 4; */
+    order: 1;
+    background-color: yellow;
+}
+
+section.grow div.items div.item:first-child  {
+    background-color: red;
+    /* how much spaces it will be allow to use */
+    flex-grow: 1;
+}
+
+section.grow div.items div.item:nth-child(2) {
+    background-color: blue;
+    flex-grow: 2;
+}
+
+section.grow div.items div.item:nth-child(3) {
+    background-color: green;
+    flex-grow: 3;
+}
+
+section.grow div.items div.item:last-child {
+    background-color: yellow;
+    flex-grow: 4;
+}
+
+section.shrink div.items div.item:first-child  {
+    background-color: red;
+    /* min spaces its allow to shrink */
+    flex-shrink: 0;
+}
+
+section.shrink div.items div.item:nth-child(2) {
+    background-color: blue;
+}
+
+section.shrink div.items div.item:nth-child(3) {
+    background-color: green;
+}
+
+section.shrink div.items div.item:last-child {
+    background-color: yellow;
+}
+
+section.basis div.items div.item:first-child  {
+    background-color: red;
+    /* flexbox min width */
+    flex-basis: 400px;
+}
+
+section.basis div.items div.item:nth-child(2) {
+    background-color: blue;
+}
+
+section.basis div.items div.item:nth-child(3) {
+    background-color: green;
+}
+
+section.basis div.items div.item:last-child {
+    background-color: yellow;
+}
+
+section.flex div.items div.item:first-child  {
+    background-color: red;
+    /* grow (allow space), shrink (min space to shrink) and basis(min width) */
+    flex: 0 0 400px;
+}
+
+section.flex div.items div.item:nth-child(2) {
+    background-color: blue;
+}
+
+section.flex div.items div.item:nth-child(3) {
+    background-color: green;
+}
+
+section.flex div.items div.item:last-child {
+    background-color: yellow;
+}
