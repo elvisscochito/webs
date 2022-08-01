@@ -1,11 +1,11 @@
-section.flex-direction div, section.wrap div, section.flex-flow div, section.justify-content div.center, section.justify-content div.flex-start, section.justify-content div.flex-end, section.justify-content div.space-around, section.justify-content div.space-between, section.align-items div.stretch, section.align-items div.center, section.align-items div.start, section.align-items div.end, section.align-items div.baseline, section.align-content div.properties, section.order div.items, section.grow div.items, section.shrink div.items, section.basis div.items, section.flex div.items {
+section.flex-direction div, section.wrap div, section.flex-flow div, section.justify-content div:is(.center, .flex-start, .flex-end, .space-around, .space-between, .space-evenly), section.align-items div:is(.stretch,.center, .start, .end, .baseline), section.align-content div.properties, section.order div.items, section.grow div.items, section.shrink div.items, section.basis div.items, section.flex div.items {
     display: flex;
     background-color: hsl(0, 0%, 66%);
     border: 1px solid hsla(0, 0%, 0%, 0.3);
     padding: 10px;
 }
 
-section.align-items div.stretch, section.align-items div.center, section.align-items div.start, section.align-items div.end, section.align-items div.baseline, section.align-content div.properties, section.order div.items, section.grow div.items, section.shrink div.items, section.basis div.items, section.flex div.items {
+section.align-items div:is(.stretch, .center, .start, .end, .baseline), section.align-content div.properties, section.order div.items, section.grow div.items, section.shrink div.items, section.basis div.items, section.flex div.items {
     height: 400px;
 }
 
@@ -112,7 +112,7 @@ section.align-content div.properties {
     align-content: flex-end;
 }
 
-section.flex-direction div.row div.item, section.flex-direction div.row-reverse div.item, section.flex-direction div.column div.item, section.flex-direction div.column-reverse div.item, section.wrap div.nowrap div.item, section.wrap div.wrap div.item, section.wrap div.wrap-reverse div.item, section.flex-flow div div.item, section.justify-content div.center div.item, section.justify-content div.flex-start div.item, section.justify-content div.flex-end div.item, section.justify-content div.space-around div.item, section.justify-content div.space-between div.item, section.justify-content div.space-evenly, section.align-items div.stretch div.item, section.align-items div.center div.item, section.align-items div.start div.item, section.align-items div.end div.item, section.align-items div.baseline div.item, section.align-content div.properties div.item, section.order div.items div.item, section.grow div.items div.item, section.shrink div.items div.item, section.basis div.items div.item, section.flex div.items div.item {
+section.flex-direction div:is(.row div.item, .row-reverse div.item, .column div.item, .column-reverse div.item),section.wrap div:is(.nowrap div.item, .wrap div.item, .wrap-reverse div.item), section.flex-flow div div.item, section.justify-content div:is(.center div.item, .flex-start div.item, .flex-end div.item, .space-around div.item, .space-between div.item, .space-evenly div.item), section.align-items div:is(.stretch div.item, .center div.item, .start div.item, .end div.item, .baseline div.item), section.align-content div.properties div.item, section.order div.items div.item, section.grow div.items div.item, section.shrink div.items div.item, section.basis div.items div.item, section.flex div.items div.item {
     background-color: hsl(0, 0%, 83%);
     text-align: center;
     outline: 1px solid hsla(0, 0%, 0%, 0.3);

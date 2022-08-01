@@ -1,0 +1,99 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    /* padding: 0;
+	margin: 0; */
+	box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --tertiary-color: hsl(0, 0%, 75%);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.card {
+    background-color: hsl(0, 0%, 100%);
+    padding: 1rem;
+    border: 1px solid var(--tertiary-color);
+    border-radius: .25rem;
+    /* max-width: 300px; */
+}
+
+.card.card-shadow {
+    border: none;
+    box-shadow: 0 2px 5px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+header.card-header {
+    margin-bottom: .5rem;
+    font-size: 1.5rem /* x-large */;
+}
+
+header.card-header.card-header-image {
+    overflow: hidden;
+}
+
+header.card-header.card-header-image > img {
+    display: block;
+    width: 100%;
+    /*commentedbecauseauto-fitisnotused*//*max-height: 200px;
+    */aspect-ratio: 16 / 9;
+    /*propertiesusedforaspectratioqualitypurposes*/object-fit: cover;
+    object-position: center;
+    /*background-size: cover;
+    *//*background-position: center;
+    background-repeat: no-repeat;
+    */transition: .2s transform ease-in-out;
+}
+
+header.card-header.card-header-image > img:hover {
+    transform: scale(1.025);
+}
+
+div.card-body {
+    font-size: .9rem /* smaller */;
+}
+
+footer.card-footer {
+    margin-top: 1rem;
+}
+
+footer.card-footer a.btn {
+    background-color: var(--tertiary-color);
+    color: hsl(0, 0%, 100%);
+    font-size: 1rem;
+    padding: .5em .75em;
+    border-radius: .25em;
+    text-decoration: none;
+}
+
+footer.card-footer a.btn:is(:hover, :focus) {
+    background-color: hsl(0, 0%, 90%);
+}
+
+footer.card-footer a.btn.outline {
+    background: none;
+    color: var(--tertiary-color);
+    border: 1px solid var(--tertiary-color);
+}
+
+footer.card-footer a.btn.outline:is(:hover, :focus) {
+    background-color: hsla(0, 0%, 75%, 0.3);
+    /* background-color: hsl(0, 0%, 90%); */
+}
+
+.btn + .btn {
+    margin-left: .25rem;
+}
