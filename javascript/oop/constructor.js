@@ -44,3 +44,20 @@ function UserParams(name, lastName, age) {
 
 const User3 = new UserParams("Will", "Smith", 28);
 console.log(User3);
+
+/** @note default constructor params values */
+
+class Person {
+    constructor(name = null, lastName = null) {
+        this.name = name;
+        this.lastName = lastName;
+    }
+    
+    greets() {
+        return `Hello I'm ${this.name} ${this.name}!`;
+    }
+}
+
+const userParams = new Person('John', 'Doe');
+const userWithoutParams = new Person();
+console.log(userParams, userWithoutParams);
