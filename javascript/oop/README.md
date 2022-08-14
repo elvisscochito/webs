@@ -14,7 +14,7 @@ __Two accepted principles of OOP are (typically these requirements classify a la
 * Support few principles to allow modularity and code reusability:
     * __Encapsulation:__ Objects can hide their internal state and behavior.
     * __Inheritance:__ Objects can inherit one, some or all features (properties, methods) from other objects.
-    * __Polymorphism:__ Objects can be used in different ways (for example a method can be called with different data types parameters).
+    * __Polymorphism:__ Objects can be used in different ways (for example a method can be called with different data types parameters and different amount of params and in the call automatically can switch between them).
 
 Is Javascript 00?
 * Javascript lack of a class concept at the begging, but it's now possible to use it within the `class` keyword.
@@ -24,3 +24,6 @@ Is Javascript 00?
 * A language can be OO even without classes like JS
 
 Model trough objects to simplify the reality means __*`abstraction`*__.
+
+## Sources
+* [Link](https://www.youtube.com/watch?v=N_t1A39IB_8&list=WL&index=151&t=223s "YouTube")
