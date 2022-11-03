@@ -1,0 +1,57 @@
+/* overflow */
+
+section.overflow div {
+    background-color: #ffa600;
+    /* display: inline-block; */
+    width: 24%;
+    height: 400px;
+    float: left;
+}
+
+/* (default) */
+section.overflow div.visible {
+    overflow: visible;
+}
+
+section.overflow div.hidden {
+    overflow: hidden;
+}
+
+section.overflow div.scroll {
+    overflow: scroll;
+}
+
+section.overflow div.auto {
+    overflow: auto;
+}
+
+section.overflow hr {
+    clear: both;
+}
+
+/* visibility */
+
+section.visibility div {
+    background-color: #c0c0c0;
+    width: 24%;
+    height: 400px;
+    display: table-cell;
+}
+
+/* (default) */
+section.visibility div.visible {
+    visibility: visible;
+}
+
+section.visibility div.hidden {
+    visibility: hidden;
+}
+
+/* only for table elements, otherwise hidden */
+section.visibility div.collapse tr.collapse, section.visibility div.collapse p {
+    visibility: collapse;
+}
+
+table, th, td {
+    border: 1px solid #000000;
+}

@@ -1,0 +1,5 @@
+div.sixteen-nine {
+    background-color: brown;
+    color: hsl(0, 0%, 100%);
+    aspect-ratio: 16 / 9;
+}

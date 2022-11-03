@@ -1,0 +1,121 @@
+/* em (for font): lem is current size, .75 is 75% of the current size 
+rem (for font): Irem is current size of root element */
+
+section:is(.absolute, .relative) {
+    outline: 1px solid black;
+}
+
+section.absolute div.px {
+    width: 100px;
+    background-color: #f00;
+}
+
+section.absolute div.mm {
+    width: 100mm;
+    background-color: #0f0;
+}
+
+section.absolute div.cm {
+    width: 100cm;
+    background-color: #00f;
+}
+
+section.absolute div.in {
+    width: 100in;
+    background-color: #ff0;
+}
+
+section.absolute div.pt {
+    width: 100pt;
+    background-color: #0ff;
+}
+
+section.absolute div.pc {
+    width: 100pc;
+    background-color: #f0f;
+}
+
+section.relative div.parent {
+    font-size: 32px;
+}
+
+section.relative div.parent div.em, section.relative div.em {
+    /* Relative to the font-size of the element (2em means 2 times the size of the current font) */
+    font-size: 2em;
+    background-color: #f00;
+}
+
+section.relative div.parent div.rem, section.relative div.rem {
+    /* Relative to font-size of the root element */
+    font-size: 2rem;
+    background-color: #00f;
+}
+
+section.relative div.percent-font, section.relative div.parent div.percent-font {
+    /* Relative to the font-size of the element (200% means 2 times the size of the current font), SO WORKS LIKE em */
+    font-size: 200%;
+    background-color: #0f0;
+}
+
+section.relative div.icon-container {
+    font-size: 16px;
+}
+
+section.relative div.icon-container.large {
+    font-size: 32px;
+}
+
+.icon {
+    background-color: #f00;
+}
+
+.em-icon {
+    width: 1em;
+    height: 1em;
+}
+
+.rem-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+section.relative div.ch {
+    /* Relative to the width of the "0" (zero), means that increase 1.15625 times, and is for CHARACTERS/strings */
+    font-size: 2ch;
+    background-color: #f0f;
+}
+
+section.relative div.ex {
+    /* Relative to the x-height of the current font (rarely used), 14.359375px so is less than the parent font size */
+    font-size: 1ex;
+    background-color: #ff0;
+}
+
+section.relative div.vw {
+    width: 100vw;
+    background-color: #f00;
+}
+
+section.relative div.vh {
+    height: 25vh;
+    background-color: #0f0;
+}
+
+section.relative div.vmin {
+    width: 100vmin;
+    /* min-width: 100vw; */
+    height: 15vmin;
+    background-color: #00f;
+}
+
+section.relative div.vmax {
+    width: 100vmax;
+    /* min-width: 100vw; */
+    height: 15vmin;
+    background-color: #ff0;
+}
+
+section.relative div.percent {
+    width: 50%;
+    background-color: #f00;
+}

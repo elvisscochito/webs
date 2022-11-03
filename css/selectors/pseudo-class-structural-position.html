@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+
+        div.top-bottom ul {
+            list-style-type: none;
+        }
+
+        /* div.top-bottom ul li:first-child {
+            border: 1px solid black;
+            border-top: none;
+            color: red;
+        }
+
+        div.top-bottom ul li:last-child {
+            border-bottom: none;
+            border: 1px solid black;
+        } */
+
+        /* first-child */
+        div.first-child li:first-child {
+            color: gray;
+        }
+
+        /* last-child */
+        div.last-child li:last-child {
+            color: gray;
+        }
+
+        /* nth-child() - algebraic expression (an, an+b, an-b, n+b, -n+b, and -an+b) - (a×n)±b - li:nth-child(4n+7) = (4x0)+7, (4x1)+7, (4x2)+7, (4x3)+7 = 7, 11, 15, 19 - li:nth-child(n+5) = (1×0)+5, (1×1)+5, (1×2)+5 - li:nth-child(-3n+12) = 1..2, 4....5, 7...8, 10...11 - li:nth-child(-n+9) = 1...9, var a is default to 0 */
+
+        /* also supports even or odd */
+        div.nth-child ul.even li:nth-child(even) {
+            color: gray;
+        }
+
+        div.nth-child ul.odd li:nth-child(odd) {
+            color: gray;
+        }
+
+        div.nth-child ul.normal li:nth-child(2) {
+            color: gray;
+            background-color: black;
+        }
+
+        div.nth-child ul.normal-formula li:nth-child(2n) {
+            color: gray;
+            background-color: black;
+        }
+
+        div.nth-child ul.normal-minus-formula li:nth-child(2n - 1) {
+            color: gray;
+            background-color: black;
+        }
+
+        div.nth-child ul.normal-add-formula li:nth-child(2n + 3) {
+            color: gray;
+            background-color: black;
+        }
+
+        /* nth-last-child() */
+        div.nth-last-child ul.reverse li:nth-last-child(1) {
+            color: gray;
+            background-color: black;
+        }
+
+        div.nth-last-child ul.reverse-formula li:nth-last-child(2n) {
+            color: gray;
+            background-color: black;
+        }
+
+        div.nth-last-child ul.reverse-minus-formula li:nth-last-child(2n - 1) {
+            color: gray;
+            background-color: black;
+        }
+
+        div.nth-last-child ul.reverse-add-formula li:nth-last-child(2n + 3) {
+            color: gray;
+            background-color: black;
+        }
+
+        /* :only-child */
+        code:only-child {
+            color: purple;
+        }
+
+        /* :first-of-type */
+        div.first-of-type li:first-of-type {
+            color: brown;
+        }
+
+        /* :last-of-type */
+        div.last-of-type li:last-of-type {
+            color: pink;
+        }
+
+        /* :nth-of-type() */
+        div.nth-of-type ul.normal-2 li:nth-of-type(2) {
+            color: green;
+        }
+
+        div.nth-of-type ul.normal-formula-2 li:nth-of-type(2n) {
+            color: green;
+        }
+
+        div.nth-of-type ul.normal-minus-formula-2 li:nth-of-type(2n - 1) {
+            color: green;
+        }
+
+        div.nth-of-type ul.normal-add-formula-2 li:nth-of-type(2n + 3) {
+            color: green;
+        }
+
+        /* nth-last-of-type() */
+        div.nth-last-of-type ul.reverse-2 li:nth-last-of-type(1) {
+            color: orange;
+        }
+
+        div.nth-last-of-type ul.reverse-formula-2 li:nth-last-of-type(2n) {
+            color: orange;
+        }
+
+        div.nth-last-of-type ul.reverse-minus-formula-2 li:nth-last-of-type(2n - 1) {
+            color: orange;
+        }
+
+        div.nth-last-of-type ul.reverse-add-formula-2 li:nth-last-of-type(2n + 3) {
+            color: orange;
+        }
+
+        /* only-of-type */
+        div.only-of-type li:only-of-type {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pseudo-classes structural & position</h1>
+    </header>
+
+    <main>
+        <hr>
+
+        <section>
+            <div class="top-bottom">
+                <code>ul {...}</code>
+                <ul>
+                    <li>Aa</li>
+                    <li>Aa</li>
+                    <li>Aa</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="first-child">
+                <h3>First-child</h3>
+                <code>li:first-child {...}</code>
+                <ul>
+                    <li>Styled</li>
+                    <li>No styled</li>
+                    <li>No styled</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="last-child">
+                <h3>Last-child</h3>
+                <code>li:last-child {...}</code>
+                <ul>
+                    <li>No styled</li>
+                    <li>No styled</li>
+                    <li>Styled</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="nth-child">
+                <h3>Nth-child</h3>
+
+                <code>li:nth-child(even) {...}</code>
+                <ul class="even">
+                    <li>No styled</li>
+                    <li>Styled</li>
+                    <li>No styled</li>
+                    <li>Styled</li>
+                </ul>
+
+                <code>li:nth-child(odd) {...}</code>
+                <ul class="odd">
+                    <li>Styled</li>
+                    <li>No styled</li>
+                    <li>Styled</li>
+                    <li>No styled</li>
+                </ul>
+
+                <code>li:nth-child(2) {...}</code>
+                <ul class="normal">
+                    <li>Aa</li>
+                    <li>Styled</li>
+                    <li>Aa</li>
+                </ul>
+
+                <code>li:nth-child(2n) {...}</code>
+                <ul class="normal-formula">
+                    <li>Aa</li>
+                    <li>Styled</li>
+                    <li>Aa</li>
+                    <li>Styled</li>
+                </ul>
+
+                <code>li:nth-child(2n - 1) {...}</code>
+                <ul class="normal-minus-formula">
+                    <li>Styled</li>
+                    <li>Aa</li>
+                    <li>Styled</li>
+                    <li>Aa</li>
+                </ul>
+
+                <code>li:nth-child(2n + 3) {...}</code>
+                <ul class="normal-add-formula">
+                    <li>Aa</li>
+                    <li>Aa</li>
+                    <li>Styled</li>
+                    <li>Aa</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="nth-last-child">
+                <h3>Nth-last-child</h3>
+                <code>:nth-last-child(1) {...}</code>
+                
+                <ul class="reverse">
+                    <li>Unstyled</li>
+                    <li>Unstyled</li>
+                    <li>Styled</li>
+                </ul>
+
+                <code>:nth-last-child(2n) {...}</code>
+                <ul class="reverse-formula">
+                    <li>Styled</li>
+                    <li>Aa</li>
+                    <li>Styled</li>
+                    <li>Aa</li>
+                </ul>
+                
+                <code>:nth-last-child(2n - 1) {...}</code>
+                <ul class="reverse-minus-formula">
+                    <li>Aa</li>
+                    <li>Styled</li>
+                    <li>Aa</li>
+                    <li>Styled</li>
+                </ul>
+
+                <code>:nth-last-child(2n + 3) {...}</code>
+                <ul class="reverse-add-formula">
+                    <li>Aa</li>
+                    <li>Styled</li>
+                    <li>Aa</li>
+                    <li>Aa</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div>
+                <code>code:only-child {...}</code>
+            </div>
+
+            <hr>
+
+            <div class="first-of-type">
+                <h3>First-of-type</h3>
+                <code>:first-of-type {...}</code>
+
+                <ul>
+                    <li>Styled</li>
+                    <li>Unaffected</li>
+                    <li>Unaffected</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="last-of-type">
+                <h3>Last-of-type</h3>
+                <code>:last-of-type {...}</code>
+
+                <ul>
+                    <li>Unaffected</li>
+                    <li>Unaffected</li>
+                    <li>Styled</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="nth-of-type">
+                <h3>Nth-of-type</h3>
+                <code>:nth-of-type(2) {...}</code>
+
+                <ul class="normal-2">
+                    <li>Unaffected</li>
+                    <li>Styled</li>
+                    <li>Unaffected</li>
+                </ul>
+
+                <code>:nth-of-type(2n) {...}</code>
+                <ul class="normal-formula-2">
+                    <li>Unaffected</li>
+                    <li>Styled</li>
+                    <li>Unaffected</li>
+                    <li>Styled</li>
+                </ul>
+
+                <code>:nth-of-type(2n - 1) {...}</code>
+                <ul class="normal-minus-formula-2">
+                    <li>Styled</li>
+                    <li>Unaffected</li>
+                    <li>Styled</li>
+                    <li>Unaffected</li>
+                </ul>
+
+                <code>:nth-of-type(2n + 3) {...}</code>
+                <ul class="normal-add-formula-2">
+                    <li>Unaffected</li>
+                    <li>Unaffected</li>
+                    <li>Styled</li>
+                    <li>Unaffected</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="nth-last-of-type">
+                <h3>Nth-last-of-type</h3>
+                <code>:nth-last-of-type(1) {...}</code>
+
+                <ul class="reverse-2">
+                    <li>Unaffected</li>
+                    <li>Unaffected</li>
+                    <li>Styled</li>
+                </ul>
+
+                <code>:nth-last-of-type(2n) {...}</code>
+                <ul class="reverse-formula-2">
+                    <li>Styled</li>
+                    <li>Unaffected</li>
+                    <li>Styled</li>
+                    <li>Unaffected</li>
+                </ul>
+
+                <code>:nth-last-of-type(2n - 1) {...}</code>
+                <ul class="reverse-minus-formula-2">
+                    <li>Unaffected</li>
+                    <li>Styled</li>
+                    <li>Unaffected</li>
+                    <li>Styled</li>
+                </ul>
+
+                <code>:nth-last-of-type(2n + 3) {...}</code>
+                <ul class="reverse-add-formula-2">
+                    <li>Unaffected</li>
+                    <li>Styled</li>
+                    <li>Unaffected</li>
+                    <li>Unaffected</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div class="only-of-type">
+                <h3>Only-of-type</h3>
+                <code>:only-of-type {...}</code>
+
+                <ul>
+                    <li>Styled</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr>
+    </main>
+
+    <footer>
+        <p>By Elviro Dominguez Soriano</p>
+    </footer>
+</body>
+</html>

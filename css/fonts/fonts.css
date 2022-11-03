@@ -1,0 +1,264 @@
+/* types */
+div.types p.serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+div.types p.sans-serif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* font-family */
+div.font-family p.system-ui {
+    font-family: system-ui;
+}
+
+div.font-family p.arial {
+    font-family: Arial;
+}
+
+div.font-family p.helvetica{
+    font-family: Helvetica;
+}
+
+div.font-family p.sans-serif {
+    font-family: sans-serif;
+}
+
+/* custom fonts */
+/* @font-face {
+    font-family: ;
+    src: url();
+} */
+
+/* apple fonts */
+
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+.custom-font p{
+    /* font-family: -apple-system, system-ui, BlinkMacSystemFont; */
+    font-family: "San Francisco";
+}
+
+/* font-style */
+
+/* default */
+div.font-style p.normal {
+    font-style: normal;
+}
+
+div.font-style p.italic {
+    font-style: italic;
+}
+
+/* kinda italic */
+div.font-style p.oblique {
+    font-style: oblique;
+}
+
+/* font-variant */
+
+/* (default) */
+div.font-variant p.normal {
+    font-variant: normal;
+}
+
+div.font-variant p.small-caps {
+    font-variant: small-caps;
+}
+
+/* font-size */
+div.font-size p.xx-small {
+    font-size: xx-small;
+}
+
+div.font-size p.x-small {
+    font-size: x-small;
+}
+
+div.font-size p.small {
+    font-size: small;
+}
+
+div.font-size p.smaller {
+    font-size: smaller;
+}
+
+/* (default) */
+div.font-size p.medium {
+    font-size: medium;
+}
+
+div.font-size p.large {
+    font-size: large;
+}
+
+div.font-size p.larger {
+    font-size: larger;
+}
+
+div.font-size p.x-large {
+    font-size: x-large;
+}
+
+div.font-size p.xx-large {
+    font-size: xx-large;
+}
+
+/* pixels */
+/* (16px almost cases default) */
+div.font-size p.pixels {
+    font-size: 24px;
+}
+
+/* percentage */
+/* (100% default) */
+div.font-size p.percentage {
+    font-size: 150%;
+}
+
+/* color and background-color */
+
+/* difference between Cover block elements and Cover inline elements */
+div.color-background-color p, div.color-background-color span {
+    color: #0000FF;
+    background-color: #B3B3B3;
+}
+
+/* (default) */
+div.text-align p.left {
+    text-align: left;
+}
+
+div.text-align p.right {
+    text-align: right;
+}
+
+div.text-align p.center {
+    text-align: right;
+}
+
+div.text-align p.center {
+    text-align: center;
+}
+
+div.text-align p.justify {
+    text-align: justify;
+}
+
+div.text-align p.start {
+    text-align: start;
+}
+
+div.text-align p.end {
+    text-align: end;
+}
+
+/* line-height: normal|number|length|percentage */
+
+/* (default) */
+div.line-height p.normal {
+    line-height: normal;
+}
+
+/* (recommended) */
+div.line-height p.number {
+    line-height: 1.6;
+}
+
+div.line-height p.middle-percentage {
+    line-height: 50%;
+}
+
+div.line-height p.double-percentage {
+    line-height: 200%;
+}
+
+/* font-weight */
+
+/* (default) */
+div.font-weight p.normal {
+    font-weight: normal;
+}
+
+div.font-weight p.lighter {
+    font-weight: lighter;
+}
+
+div.font-weight p.bold {
+    font-weight: bold;
+}
+
+div.font-weight p.value {
+    font-weight: 900;
+}
+
+/* text-transform */
+div.text-transform p.uppercase {
+    text-transform: uppercase;
+}
+
+div.text-transform p.lowercase {
+    text-transform: lowercase;
+}
+
+div.text-transform p.capitalize {
+    text-transform: capitalize;
+}
+
+/* test responsive web design */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: xx-small;
+    }
+}
+
+/* text-decoration */
+
+/* (default) */
+div.text-decoration p.none {
+    text-decoration: none;
+}
+
+div.text-decoration p.overline {
+    text-decoration: overline;
+}
+
+div.text-decoration p.line-through {
+    text-decoration: line-through;
+}
+
+div.text-decoration p.underline {
+    text-decoration: underline;
+}
+
+/* (default) - "text-decoration: ;" for short */
+div.text-decoration p.solid {
+    text-decoration: underline solid orange;
+    /* text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: orange; */
+}
+
+div.text-decoration p.dotted {
+    text-decoration: underline dotted orange;
+}
+
+div.text-decoration p.wavy {
+    text-decoration: underline wavy orange;
+}
+
+section.column-count {
+    column-count: 3;
+
+    /* (default) */
+    /* column-gap: normal; */
+
+    /* column-gap: 15px; */
+
+    /* column-count: auto;
+    column-width: 8rem; */
+}

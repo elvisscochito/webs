@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Styled table</title>
+
+    <style>
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 6px 15px;
+        }
+
+        thead th, tbody th, tfoot th {
+            background-color: #42444e;
+            color: #fff;
+            text-align: left;
+            border-right: 1px solid #c6c9cc;
+            border-bottom: 1px solid #c6c9cc;
+            border-top: 1px solid #c6c9cc;
+        }
+
+        thead th:first-child {
+            border-left: 1px solid #c6c9cc;
+        }
+
+        thead tr:first-child th:first-child {
+            border-top-left-radius: 6px;
+        }
+
+        thead tr:first-child th:last-child {
+            border-top-right-radius: 6px;
+        }
+
+        /* tbody starts */
+
+        tbody th, tfoot th {
+            border-bottom: 1px solid #c6c9cc;
+        }
+
+        td {
+            /* border: 1px solid #c6c9cc; */
+            border-right: 1px solid #c6c9cc;
+            border-bottom: 1px solid #c6c9cc;
+        }
+
+        td:first-child, tbody th:first-child, tfoot th:first-child {
+            border-left: 1px solid #c6c9cc;
+        }
+        
+        tr:nth-child(even) td {
+            background: #eaeaed;
+        }
+
+        /* tbody ends */
+
+        tfoot tr:last-child td:first-child, tfoot tr:last-child th:first-child {
+            border-bottom-left-radius: 6px;
+        }
+
+        tfoot tr:last-child td:last-child, tfoot tr:last-child th:last-child {
+            border-bottom-right-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Styled table</h1>
+    </header>
+
+    <main>
+        <hr>
+
+        <table>
+            <caption>Styled Table</caption>
+    
+            <thead>
+                <tr>
+                    <th scope="col" scope="row">#</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+    
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Item</td>
+                    <td>Description</td>
+                </tr>
+    
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Item</td>
+                    <td>Description</td>
+                </tr>
+            </tbody>
+    
+            <tfoot>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Item</td>
+                    <td>Description</td>
+                </tr>
+    
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Item</td>
+                    <td>Description</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <hr>
+    </main>
+
+    <footer>
+        <p>By Elviro Dominguez Soriano</p>
+    </footer>
+</body>
+</html>

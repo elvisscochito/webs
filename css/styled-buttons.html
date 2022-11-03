@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buttons</title>
+
+    <style>
+        .button {
+            /* display: inline-block; */
+            border-radius: 3px;
+            padding: 7px 12px;
+            border: 1px solid #d5d5d5;
+            background-image: linear-gradient(#eee, #ddd);
+            font: 700 13px/18px Helvetica, Arial;
+        }
+
+        .button.success {
+            color: #fff;
+            background: #569e3d linear-gradient(#79d858, #569e3d) repeat-x;
+            border-color: #4a993e;
+        }
+
+        .button.danger {
+            color: #900;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Buttons style</h1>
+    </header>
+
+    <main>
+        <hr>
+
+        <section>
+            <button type="button" class="button">Normal button</button>
+    
+            <button type="button" class="button success">Success button</button>
+    
+            <button type="button" class="button danger">Danger button</button>
+        </section>
+
+        <hr>
+    </main>
+
+    <footer>
+        <p>By Elviro Dominguez Soriano</p>
+    </footer>
+</body>
+</html>

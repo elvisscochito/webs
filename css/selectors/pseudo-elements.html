@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        /* generate content pseudo-elements */
+        /* before (front) */
+        div::before {
+            content: "div::before";
+        }
+
+        /* after (behind) */
+        div::after {
+            content: "div::after";
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a::after {
+            color: silver;
+            content: " (" attr(href) ")";
+            font-size: 12px;
+        }
+
+        /* textual pseudo-elements */
+
+        /* first-letter */
+        p.letter::first-letter {
+            font-weight: bold;
+            font-family: cursive;
+        }
+
+        /* first-line */
+        p::first-line {
+            color: gray;
+        }
+
+        /* fragment pseudo-elements */
+        span::selection {
+            background: silver;
+        }
+
+        /* ::marker */
+        ::marker {
+            color: orange;
+            transition: color 1s;
+        }
+
+        li:hover::marker {
+            color: red;
+        }
+
+        /* li {
+            padding-left: 3px;
+        } */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pseudo elements</h1>
+    </header>
+
+    <main>
+        <hr>
+
+        <section>
+            <h3>Generate content pseudo-elements</h3>
+            <div>
+                <code>Middle</code>
+            </div>
+
+            <hr>
+
+            <a href="https://www.google.com/">Go to Google</a>
+
+            <hr>
+
+            <h3>Textual pseudo-elements</h3>
+            
+            <p class="letter">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, ipsum rerum. Nulla dolor cupiditate, ipsa ab numquam at laudantium ratione. Neque aspernatur enim, ipsum quibusdam nihil similique! Quam, consectetur iusto.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nostrum deserunt quibusdam, excepturi omnis cum rerum, accusantium commodi a delectus eos dolorem dolorum ullam ipsam ab autem, ipsum sapiente quidem.</p>
+
+            <hr>
+
+            <h3>Selection</h3>
+            <code>::selection {...}</code>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ratione necessitatibus. Aperiam nesciunt architecto nemo perferendis iste aspernatur omnis distinctio amet sit facere, officia magni exercitationem aliquam voluptas laborum dicta.</span>
+
+            <hr>
+            <h3>Marker</h3>
+            <code>::marker {...}</code>
+            <ul>
+                <li>Styled</li>
+                <li>Styled</li>
+                <li>Styled</li>
+            </ul>
+        </section>
+
+        <hr>
+    </main>
+
+    <footer>
+        <p>By Elviro Dominguez Soriano</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* color names */
+div.color-names code.red {
+    color: red;
+}
+
+div.color-names code.green {
+    color: green;
+}
+
+div.color-names code.blue {
+    color: blue;
+}
+
+/* hexadecimal - hex color code */
+div.hexadecimal code.red {
+    color: #ff0000;
+}
+
+div.hexadecimal code.green {
+    color: #008000;
+}
+
+div.hexadecimal code.blue {
+    color: #0000ff;
+}
+
+div.hexadecimal code.short-red {
+    color: #f00;
+}
+
+div.hexadecimal code.short-green {
+    color: #080;
+}
+
+div.hexadecimal code.short-blue {
+    color: #00f;
+}
+
+/* rgb - rgb(red, green, blue); */
+div.rgb code.red {
+    color: rgb(255, 0, 0);
+}
+
+div.rgb code.green {
+    color: rgb(0, 128, 0);
+}
+
+div.rgb code.blue {
+    color: rgb(0, 0, 255);
+}
+
+/* rgba - rgba(red, green, blue, alpha transparency) */
+div.rgba code.red {
+    color: rgba(255, 0, 0, 0.5);
+}
+
+div.rgba code.green {
+    color: rgba(0, 128, 0, 0.5);
+}
+
+div.rgba code.blue {
+    color: rgba(0, 0, 255, 0.5);
+}
+
+/* hsl - hsl(hue, saturation, lightness);  */
+div.hsl code.red {
+    color: hsl(0, 100%, 50%);
+}
+
+div.hsl code.green {
+    color: hsl(120, 100%, 25%);
+}
+
+div.hsl code.blue {
+    color: hsl(240, 100%, 50%);
+}
+
+/* hsla - hsla(hue, saturation, lightness, alpha transparency) */
+div.hsla code.red {
+    color: hsla(0, 100%, 50%, 0.5);
+}
+
+div.hsla code.green {
+    color: hsla(120, 100%, 25%, 0.5);
+}
+
+div.hsla code.blue {
+    color: hsla(240, 100%, 50%, 0.5);
+}

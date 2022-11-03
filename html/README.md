@@ -6,6 +6,7 @@
 ---
 
 ## Docs
+* SPECIFICITY: * > body > :root > html
 
 ## Links
 

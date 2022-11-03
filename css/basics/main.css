@@ -1,0 +1,9 @@
+/* selector {
+    property: value;
+} */
+
+/* allows reuse styles for other webpages */
+
+.external code {
+    color: green;
+}

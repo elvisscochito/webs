@@ -1,0 +1,89 @@
+/* inline-elements */
+
+span {
+    width: 75px;
+    height: 50px;
+    background-color: hsl(120, 100%, 25%);
+    border: 1px solid hsl(0, 0%, 0%);
+}
+
+/* (default) */
+div.inline span {
+    display: inline;
+    /* inline-block; */ /* try block and inline block;
+    float; */
+}
+
+div.inline-block span {
+    display: inline-block;
+}
+
+div.block span {
+    display: block;
+}
+
+div.none span {
+    display: none;
+}
+
+/* block-elements */
+
+section.block-elements div:not([class]) {
+    background-color: hsl(39, 100%, 50%);
+    width: 45%;
+    height: 100px;
+    border: 1px solid hsl(0, 0%, 0%);
+}
+
+section.block-elements div.block div {
+    display: block;
+}
+
+section.block-elements div.inline-block div {
+    display: inline-block;
+}
+
+section.block-elements div.inline div {
+    display: inline;
+}
+
+section.block-elements div.none div {
+    /* display: normal; */
+    display: none;
+}
+
+p {
+    background-color: hsl(0, 100%, 50%);
+    width: 200px;
+    height: 100px;
+}
+
+/* complementary-properties */
+
+section.complementary-properties span {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(240, 100%, 50%);
+    border: 1px solid hsl(0, 0%, 50%);
+    /* display: inline-block; */ /* simulate divs */
+}
+
+section.complementary-properties div.float-right span {
+    float: right;
+}
+
+/* section.complementary-properties div.float-right + hr{
+    clear: right;
+} */
+
+section.complementary-properties div.float-left span {
+    float: left;
+}
+
+/* section.complementary-properties div.float-left + hr{
+    clear: left;
+} */
+
+/* clear: left, right, both */
+section.complementary-properties div.clear-both {
+    clear: both;
+}

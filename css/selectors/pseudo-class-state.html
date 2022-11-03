@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        /* user action */
+
+        /* hover */
+        div.hover a:hover {
+            background-color: green;
+        }
+
+        /* focus */
+        /* :focus { */
+            /* outline: none; */
+            /* border: 1px solid black; */
+            /* outline: 3px solid blue;
+        } */
+
+        /* :focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        :focus-visible {
+            outline: 1px solid purple;
+        }  */
+
+        input:focus {
+            background-color: orange;
+        }
+
+        ul.focus-within:focus-within {
+            background-color: red;
+        }
+
+        /* active */
+        a:active {
+            color: red;
+        }
+
+        input:in-range {
+            border: 1px solid green;
+        }
+
+        input:in-range + label::after {
+            content: "In range";
+        }
+
+        input:out-of-range {
+            border: 1px solid red;
+        }
+
+        input:out-of-range + label::after {
+            content: "Out of range";
+        }
+
+        /* user interface state */
+
+        /* required */
+        input:required {
+            background-color: red;
+        }
+
+        /* checked */
+        input:checked + label {
+            color: blue;
+        }
+
+        /* enabled (default) */
+        input:enabled + label {
+            color: gray;
+        }
+
+        /* disabled */
+        input:disabled + label { 
+            color: gray;
+        }
+
+        /* indeterminate (works with both checkbox or radio button) */
+        input:indeterminate + label {
+            color: gray;
+        }
+
+        /* links (cascading right order) */
+        a:link {
+            color: pink;
+            text-decoration: none;
+            border-bottom: 1px solid black;
+        }
+
+        a:visited {
+            color: chocolate;
+        }
+
+        /* a:hover {
+            background-color: green;
+        }
+
+        a:focus {
+            background-color: orange;
+        }
+
+        a:active {
+            color: red;
+        } */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pseudo-classes state</h1>
+    </header>
+
+    <main>
+        <hr>
+
+        <section>
+            <div class="hover">
+                <h3>Hover</h3>
+                <code>code:hover {...}</code>
+                <a href="#">Link</a>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Focus</h3>
+                <code>input:focus {...}</code>
+                <input type="text">
+
+                <code>input:focus-within {...}</code>
+                <ul>
+                    <li class="focus-within"><input type="text"></li>
+                </ul>
+
+                <code>input:focus-within {...}</code>
+                <ul class="focus-within">
+                    <li><input type="text"></li>
+                    <li><input type="text"></li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Active</h3>
+                <code>a:active {...}</code>
+                <a href="#">Active</a>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>In range</h3>
+                <code>:in-range {...}</code>
+                <p>Value between 1...10 are valid</p>
+
+                <input id="in-range" type="number" min="1" value="8" max="10" placeholder="1...10">
+                <label for="in-range">Value: </label>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Required</h3>
+                <code>input:required {...}</code>
+                <input type="text" required>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Checked</h3>
+                <code>input:checked {...}</code>
+                <input type="checkbox" id="checked">
+                <label for="checked">Checkbox</label>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Enabled</h3>
+
+                <code>input:enabled {...}</code>
+                <input type="checkbox" id="enabled" enabled>
+                <label for="enabled">Enabled</label>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Disabled</h3>
+
+                <code>input:disabled {...}</code>
+                <input type="checkbox" id="disabled" disabled>
+                <label for="disabled">Disabled</label>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Indeterminate</h3>
+
+                <code>input:indeterminate {...}</code>
+
+                <input type="checkbox" id="indeterminate" indeterminate>
+                <label for="indeterminate">Indeterminate</label>
+
+                <script>
+                    const inputs = document.getElementById("indeterminate");
+
+                    for (let i = 0; i < inputs.length; i++) {
+                        inputs[i].indeterminate = true;
+                    }
+                </script>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Links</h3>
+
+                <code>a:link {...}</code>
+                <a href="#">Link</a>
+
+                <code>a:visited {...}</code>
+                <a href="#">Visited</a>
+            </div>
+        </section>
+
+        <hr>
+    </main>
+
+    <footer>
+        <p>By Elviro Dominguez Soriano</p>
+    </footer>
+</body>
+</html>

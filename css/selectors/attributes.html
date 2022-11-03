@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        /* attribute present */
+        input[type="text"] {
+            color: goldenrod;
+        }
+
+        /* has */
+        [class] {
+            color: green;
+        }
+
+        /* equals/exact */
+        [class="class"] {
+            color: orange;
+        }
+
+        /* begins with */
+        [class^="b"] {
+            color: red;
+        }
+
+        /* ends with */
+        [class$="h"] {
+            color: blue;
+        }
+        
+        /* contains/substring */
+        [class*="u"] {
+            color: gray;
+        }
+
+        /* data */
+        [data-code=""] {
+            color: green;
+        }
+
+        /* spaced */
+        a[data-info~="external"] {
+            color: red;
+        }
+
+        a[data-info~="image"] {
+            border: 1px solid black;
+        }
+
+        /* hyphenated */
+        /* a[lang|="en"] {
+            color: goldenrod;
+        } */
+
+        a[class|="dashes"] {
+            color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Attributes</h1>
+    </header>
+
+    <main>
+        <hr>
+
+        <section>
+            <div>
+                <h3>Attribute present</h3>
+                <code>input[type="text"] {...}</code>
+                <input type="text">
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Has</h3>
+                <code class="">[class]</code>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Exact</h3>
+                <code class="class">[class="class"]</code>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Begins with</h3>
+                <code class="begins">[class^="b"</code>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Ends with</h3>
+                <code class="ends-with">[class$="h"]</code>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Substring</h3>
+                <code class="substring">[class*="u"]</code>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Data</h3>
+                <code data-code="">[data-code=""]</code>
+            </div>
+
+            <hr>
+
+            <div>
+                <a href="#" data-info="external image"> Click Me, Fool </a>
+            </div>
+
+            <div>
+                <a href="#" class="dashes-class">|</a>
+            </div>
+        </section>
+
+        <hr>
+    </main>
+
+    <footer>
+        <p>By Elviro Dominguez Soriano</p>
+    </footer>
+</body>
+</html>

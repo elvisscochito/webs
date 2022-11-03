@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* child */
+
+        /* descendant*/
+        div code {
+            color: green;
+        }
+
+        /* direct child */
+        article > code {
+            color: orange;
+        }
+
+        /* sibling */
+        
+        /* General */
+        p ~ code {
+            color: red;
+        }
+
+        /* Adjacent */
+        h3 + span {
+            color: blue;
+        }
+
+        /* logic */
+
+        /* or */
+        strong, em {
+            color: gray;
+        }
+
+        /* and (.class-1.class-2) */
+        code.and {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Combination selectors</h1>
+    </header>
+
+    <main>
+        <hr>
+
+        <section>
+            <div>
+                <h3>Descendant</h3>
+                <code>div p {...}</code>
+            </div>
+    
+            <hr>
+    
+            <div>
+                <h3>Direct child</h3>
+                <article>
+                    <code>article > code {...}</code>
+                </article>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>General</h3>
+                <p></p>
+                <code>h3 ~ ul {...}</code>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Adjacent</h3>
+                <span>h3 + span {...}</span>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>Or</h3>
+                <p><strong>strong, em {...}</strong> <em>strong, em {...}</em></p>
+            </div>
+
+            <hr>
+
+            <div>
+                <h3>And</h3>
+                <code class="and">div.and {...}</code>
+            </div>
+        </section>
+
+        <hr>
+    </main>
+
+    <footer>
+        <p>By Elviro Dominguez Soriano</p>
+    </footer>
+</body>
+</html>

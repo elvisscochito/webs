@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* other */
+
+        /* :not() */
+        div.not li:not(.class){
+            color: blue;
+        }
+
+        /* :is() */
+        /* div.is ul ul li,
+        div.is ul ol li,
+        div.is ol ol li,
+        div.is ol ul li {
+            color: red;
+        } */
+
+        :is(ul, ol) :is(ol, ul) li {
+            color: green;
+        }
+
+        /* :target */
+        div.target p {
+            display: none;
+        }
+
+        div.target p:target {
+            display: block;
+            border: 1px solid gray;
+            background-color: silver;
+            color: green;
+        }
+
+        /* :empty */
+        div.empty p:empty {
+            border: 1px solid red;
+        }
+
+        /* :has (poor compatibility)*/
+        div.has:has(code) {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Other pseudo classes</h1>
+    </header>
+
+    <main>
+        <hr>
+
+        <section>
+            <div class="not">
+                <h3>Not</h3>
+
+                <code>:not {...}</code>
+
+                <ul>
+                    <li>Styled</li>
+                    <li class="class">Unaffected</li>
+                    <li>Styled</li>
+                </ul>
+            </div>
+            
+            <hr>
+
+            <div class="is">
+                <h3>Is</h3>
+                <code>:is {...}</code>
+
+                <ul>
+                    <li>Inner list 1
+                        <ul>
+                            <li>Aa</li>
+                            <li>Aa</li>
+                            <li>Aa</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        Inner list 2
+                        <ol>
+                            <li>Aa</li>
+                            <li>Aa</li>
+                            <li>Aa</li>
+                        </ol>
+                    </li>
+                </ul>
+
+                <ol>
+                    <li>
+                        Inner list 3
+                        <ol>
+                            <li>Aa</li>
+                            <li>Aa</li>
+                            <li>Aa</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Inner list 4
+                        <ul>
+                            <li>Aa</li>
+                            <li>Aa</li>
+                            <li>Aa</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <hr>
+
+            <div class="target">
+                <h3>Target</h3>
+                <code>:target {...}</code>
+                <a href="#firstTarget">Jump to first target</a>
+                <a href="#secondTarget">Jump to second target</a>
+                
+                <p id="firstTarget">First Target</p>
+                <p id="secondTarget">Second target</p>
+            </div>
+
+            <hr>
+
+            <div class="empty">
+                <h3>Empty</h3>
+                <code>:empty {...}</code>
+
+                <p>No styled</p>
+                <p><!-- Styled --></p>
+                <p></p><!-- Styled -->
+                <p><strong></strong></p> <!-- No styled -->
+            </div>
+
+            <div class="has">
+                <h3>Has</h3>
+                <code>:has {...}</code>
+            </div>
+        </section>
+
+        <hr>
+    </main>
+
+    <header>
+        <p>By Elviro Dominguez Soriano</p>
+    </header>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="measurements.css">
+</head>
+<body>
+    <header>
+        <h1>Measurements</h1>
+    </header>
+    
+    <main>
+        <section class="absolute">
+            <div class="px">
+                <code>pixels: {width: 100px;}</code>
+            </div>
+            <div class="mm">
+                <code>millimeters: {width: 100mm;}</code>
+            </div>
+            <div class="cm">
+                <code>centimeters: {width: 100cm;}</code>
+            </div>
+            <div class="in">
+                <code>inches: {width: 100in;}</code>
+            </div>
+            <div class="pt">
+                <code>points: {width: 100pt;}</code>
+            </div>
+            <div class="pc">
+                <code>picas: {width: 100pc;}</code>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="relative">
+            <div class="em">
+                <code>root (16px * 2 = 32px) em: {font-size: 2em;}</code>
+            </div>
+
+            <div class="rem">
+                <code>root (16px * 2 = 32px) rem: {font-size: 2rem;}</code>
+            </div>
+
+            <div class="percent-font">
+                <code>root (16px * 2 = 32px) percent: {font-size: 200%;}</code>
+            </div>
+
+            <div class="parent">
+                <div class="em">
+                    <code>parent (32px * 2 = 64px) em: {font-size: 2em;}</code>
+                </div>
+                
+                <div class="rem">
+                    <!-- code tag font doesn't work properly in Safari (have a font bug that causes the font size to 32px instead of 26px when in the root values 13), so works better in Chrome -->
+                    <code>parent rem (16px * 2 = 32px) : {font-size: 2rem;}</code>
+                </div>
+
+                <div class="percent-font">
+                    <code>root (16px * 2 = 32px) percent: {font-size: 200%;}</code>
+                </div>
+
+                <div class="ex">
+                    parent ex: {font-size: 1ex;}
+                </div>
+                <div class="ch">
+                    parent ch: {width: 1ch;}
+                </div>
+            </div>
+
+            <div class="icon-container">
+                <div class="icon em-icon"></div>
+                <span>1em icon</span>
+            </div>
+
+            <div class="icon-container">
+                <div class="icon rem-icon"></div>
+                <span>1rem icon</span>
+            </div>
+
+            <div class="icon-container large">
+                <div class="icon em-icon"></div>
+                <span>1em icon</span>
+            </div>
+
+            <div class="icon-container large">
+                <div class="icon rem-icon"></div>
+                <span>1rem icon</span>
+            </div>
+
+            <!-- relative to the entire screen itself -->
+            <div class="vw">
+                <code>viewport width: {width: 100vw;}</code>
+            </div>
+            <div class="vh">
+                <code>viewport height: {height: 25vh;}</code>
+            </div>
+            <div class="vmin">
+                <code>viewport min: {width: 100vmin;}</code>
+            </div>
+            <div class="vmax">
+                <code>viewport max: {width: 100vmax;}</code>
+            </div>
+
+            <!-- relative to the parent element itself -->
+            <div class="percent">
+                <code>percent: {width: 100%;}</code>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>By Elviro Dominguez Soriano, @elvisscochito on GitHub</p>
+    </footer>
+</body>
+</html>

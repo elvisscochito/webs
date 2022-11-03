@@ -1,0 +1,194 @@
+/* border style */
+
+/* (none is the default) - border for short */
+.none {
+    border: 1px none black;
+}
+
+.dotted {
+    border: 1px dotted black;
+}
+
+.dashed {
+    border: 1px dashed black;
+}
+
+.solid {
+    border: 1px solid black;
+
+    /* border-width: 1px;
+    border-style: solid;
+    border-color: transparent; */
+}
+
+.double {
+    border: 3px double black;
+}
+
+.groove {
+    border: 3px groove black;
+}
+
+.ridge {
+    border: 3px ridge black;
+}
+
+.inset {
+    border: 3px inset black;
+}
+
+.outset {
+    border: 3px outset black;
+}
+
+.hidden {
+    border: 1px hidden black;
+}
+
+/* border units */
+.pixels {
+    border: 1px solid black;
+}
+
+.thin {
+    border: thin solid black;
+}
+
+.medium {
+    border: medium solid black;
+}
+
+.large {
+    border: large solid black;
+}
+
+/* individual sides */
+.sides > code {
+    border-style: solid;
+}
+
+/* all sides */
+.one {
+    border-width: 1px;
+}
+
+/* top and right-left */
+.two {
+    border-width: 1px 2px;
+
+    /* border-top: 1px;
+    border-right: 2px;
+    border-bottom: 1px;
+    border-left: 2px; */
+}
+
+/* top, left-right and bottom */
+.three {
+    border-width: 1px 2px 3px;
+
+    /* border-top: 1px;
+    border-right: 2px;
+    border-bottom: 3px;
+    border-left: 2px; */
+}
+
+/* Top, right, bottom and left (clockwise) */
+.four {
+    border-width: 1px 2px 3px 4px;
+
+    /* border-top: 1px;
+    border-right: 2px;
+    border-bottom: 3px;
+    border-left: 4px; */
+}
+
+/* margin (also supports individual side values) */
+section.margin code.positive {
+    margin: 10px;
+}
+
+section.margin code.negative {
+    margin: -10px;
+}
+
+/* padding (also supports individual side values) */
+section.padding code {
+    padding: 10px;
+}
+
+/* additive (default for content-box) */
+section.additive div {
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid black;
+}
+
+/* centering */
+section.centering div {
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+/* box-sizing */
+section.box-sizing {
+    background-color: orange;
+    width: 800px;
+    height: 800px;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+
+section.box-sizing :is(.content-box, .border-box) {
+    padding: 10px;
+    border: 20px solid rgb(240, 205, 121);
+    margin: 0px;
+    width: 400px;
+    font-size: 16px;
+    background-color: gray;
+    display: inline-block;
+}
+
+/* (default) */
+section.box-sizing .content.box {
+    box-sizing: content-box;
+}
+
+section.box-sizing .border-box {
+    box-sizing: border-box;
+}
+
+/* common practice */
+/* html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    padding: 0;
+	margin: 0;
+    box-sizing: inherit;
+} */
+
+
+section.box-model {
+    background-color: silver;
+    width: 800px;
+    height: 800px;
+    padding: 0;
+    margin: 0;
+}
+
+section.box-model div {
+    padding: 10px;
+    border: 20px solid rgb(240, 205, 121);
+    margin: 30px;
+    width: 400px;
+    background-color: lightgreen;
+    display: inline-block;
+}

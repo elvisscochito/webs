@@ -1,0 +1,39 @@
+body {
+    counter-reset: counter; /* reversed(counter) */
+}
+
+h2::before {
+    counter-increment: counter; /* counter -1; */
+    content: "Section " counter(counter, upper-roman) ": "; /* , upper-roman */
+}
+
+h2 {
+    counter-reset: subcounter; /* create and reset every single h2 */
+}
+
+h3::before {
+    counter-increment: subcounter;
+    content: "Subsection " counter(counter, lower-roman) "." counter(subcounter, lower-roman) ": ";
+}
+
+ol {
+    counter-reset: outline;
+    list-style: none;
+}
+
+li::before {
+    counter-increment: outline;
+    content: counters(outline, ".") ". "; /* counters intead of counter (normal default list style) */
+}
+
+:root {
+    counter-reset: links;
+}
+
+a[href] {
+    counter-increment: links;
+}
+
+a[href]:empty::after {
+    content: "[" counter(links) "]";
+}
