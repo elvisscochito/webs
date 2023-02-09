@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+     <!-- action="# or url", method="post" or method="get", enctype="type/pain"-->
+     <form action="" method="" enctype="">
+            
+        <fieldset>
+            <legend>Form info</legend>
+            <!-- Pattern is for a type of validation -->
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" size="10" placeholder="1234567890" pattern="[0-9]{10}" maxlength="10" autocomplete required>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" size="10" placeholder="(Maximum 10 characters)" pattern="[A-Za-z,0-9]{1,10}" maxlength="10" autocomplete required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" size="16" placeholder="(8 - 16 characters)" pattern="[A-Za-z,0-9]{8,16}" maxlength="16" required>
+            <!-- <i class="far fa-eye fa-xs" id="toggle" name="showPassword"></i>
+            <i class="far fa-eye-slash fa-xs" id="toggle" name="hidePassword"></i>
+            <label for="toggle">Show</label> -->
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" placeholder="Optional" minlength="15" maxlength="30" onpaste="return false;" onselectstart="return false;"></textarea>
+            <!-- Send hidden info when the submit button is clicked (useful for elements values or to match updates versions) -->
+            <input type="hidden" id="hiddenID" name="hiddenName" value="123">
+            <button id="submit" name="submit"  value="submit" onclick="clicked(event);">Submit</button>
+            <input type="image" src="submit.png" alt="submit" width="48" height="48">
+            <button type="reset" id="reset" name="reset" value="reset" onclick="clicked2(event);">Reset</button>
+            
+            <script>
+                function clicked(e){
+                    if (!confirm('Are you sure?')){
+                        e.preventDefault();
+                    } else {
+                        alert("Thanks for submit");
+                    }
+                }
+                
+                function clicked2(e) {
+                    if (!confirm('Are you sure?')){
+                        e.preventDefault();
+                    }
+                }
+            </script>            
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <figure>
+        <img src="picture.png" alt="Image description in case of error" title="Image description" width="240px" height="320px">
+        <figcaption>Picture caption</figcaption>
+
+        <img src="picture.png" alt="Image description in case of error" title="Image description" width="250px" srcset="desert.jpg">
+
+        <img src="picture.png" alt="Image description in case of error" title="Image description" srcset="picture.png 200w, desert.jpg 400w" sizes="(max-width: 600px) 200px, 50vw">
+
+        <picture>
+            <source srcset="picture.png" media="(min-width: 465px)" type="image/png" alt="Pedregal" title="Pedregal">
+            <source srcset="desert.jpg" media="(min-width: 650px)" type="image/jpg" alt="Dunes" title="Dunes">
+            <!-- Fallback -->
+            <img src="img/beach.jpg" alt="Beach" title="Beach" style="width:auto;">
+        </picture>
+
+        <!-- Chrome -->
+        <audio src="music.mp3" autoplay controls loop></audio>
+        <figcaption>Audio caption</figcaption>
+
+        <!-- Safari -->
+        <audio src="music.mp3" autoplay controls loop style="width: 30%;  vertical-align: middle;"></audio>
+        <figcaption>Audio caption</figcaption>
+
+        <h3>Audio with setting clips</h3>
+        <!-- .ext#t=5,25 -->
+        <audio src="music.mp3#t=5,25" autoplay controls loop style="width: 30%;  vertical-align: middle;"></audio>
+        <figcaption>From 5s to stop at 25s </figcaption>
+
+        <!-- .ext#t=,39 -->
+        <audio src="music.mp3#t=,39" autoplay controls loop style="width: 30%;  vertical-align: middle;"></audio>
+        <figcaption>From start to stop at 39s</figcaption>
+
+        <!-- .ext#t=, 1:38:45 -->
+        <audio src="music.mp3#t=,1:38:45" autoplay controls loop style="width: 30%;  vertical-align: middle;"></audio>
+        <figcaption>From start to 1:38s and stop ¿45s later?</figcaption>
+
+        <!-- .ext#t=42 -->
+        <audio src="music.mp3#t=42" autoplay controls loop style="width: 30%;  vertical-align: middle;"></audio>
+        <figcaption>From 42s to stop at the end</figcaption>
+
+        <audio controls>
+            <source src="music.mp3" type="audio/mp3"></source>
+            <source src="music.ogg" type="audio/ogg"></source>
+            <source src="music.wav" type="audio/wav"></source>
+            <!-- Fallback -->
+            <p>If you can't play the audio, please <a href="music.mp3" download>download here </a>the audio file</p>
+        </audio>
+
+        <!-- Large size (default)-->
+        <iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <figcaption>Audio from spotify (large)</figcaption>
+
+        <!-- Compact size -->
+        <iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        <figcaption>Audio from spotify (compact)</figcaption>
+        
+        <!-- Playlist -->
+        <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/mx/playlist/heard-in-apple-ads/pl.b28c3a5975b04436b42680595f6983ad?l=en"></iframe>
+        <figcaption>Audio from Apple Music (Playlist)</figcaption>
+
+        <!-- Song -->
+        <iframe allow="autoplay *; encrypted-media *; fullscreen *" frameborder="0" height="150" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/mx/album/do-i-wanna-know/663097964?i=663097965&l=en"></iframe>
+        <figcaption>Audio from Apple Music (song</figcaption>
+
+        <video src="movie.mov" autoplay controls loop muted poster="thumbnail.png" preload="auto|metadata|none"><p>Your browser does not support the <code>video</code> element</p></video>
+        <figcaption>Video caption</figcaption>
+
+        <h3>Video with setting clips</h3>
+        <!-- .ext#t=5,8 (also works on videos)-->
+        <video src="movie.mov#t=5,8" autoplay controls loop muted poster="thumbnail.png" preload="auto|metadata|none"><p>Your browser does not support the <code>video</code> element</p></video>
+        <figcaption>From 5s to stop at 8s</figcaption>
+
+        <video controls>
+            <source src="movie.mov" type="video/mp4">
+            <source src="movie.mp4" type="video/mp4">
+            <!-- Fallback -->
+            <p>If you can't play the video, please <a href="movie.mov" download>download here</a> the video file</p>
+        </video>
+
+        <!-- To set time just add the seconds with "?start=120" at the end of the url -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/fzI9FNjXQ0o?start=120" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <figcaption>Video from YouTube</figcaption>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30199271.117748834!2d-120.88790197915712!3d22.48787689827716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x84043a3b88685353%3A0xed64b4be6b099811!2sMexico!5e0!3m2!1sen!2smx!4v1638910107955!5m2!1sen!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <figcaption>Frame caption</figcaption>
+
+        <!-- Gif -->
+
+        <img src="giphy.gif" alt="Christmas dog" width="250">
+        <figcaption>Gif with <code>img tag</code></figcaption>
+
+        <!-- incorrect, the style need to be in a css file -->
+        <img src="https://media.giphy.com/media/11EEXw1EIEoHaE/giphy.gif" alt="Christmas dog" style="width:48px;height:48px">
+        <figcaption>Gif with <code>img tag</code></figcaption>
+
+        <!-- Responsive off -->
+        <iframe src="https://giphy.com/embed/11EEXw1EIEoHaE" width="480" height="372" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cute-dog-christmas-11EEXw1EIEoHaE">via GIPHY</a></p>
+
+        <!-- Responsive on -->
+        <div style="width:100%;height:0;padding-bottom:78%;position:relative;"><iframe src="https://giphy.com/embed/11EEXw1EIEoHaE" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/cute-dog-christmas-11EEXw1EIEoHaE">via GIPHY</a></p>
+
+    </figure>
+    
+    <embed type="text/html" src="text.html"></embed>
+
+    <script src="https://gist.github.com/elvisscochito/d5e27bc1e6ef7ad30b6a216c64d467df.js"></script>
+    
+    <canvas id="canvas" width="200" height="100" style="border: 1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.
+    </canvas>
+
+    <script>
+        var c = document.getElementById("canvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
+    </script>
+
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="gray" stroke-width="4" fill="black"/>
+    </svg>
+
+    <svg width="400" height="180">
+        <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+        style="fill:black;stroke:gray;stroke-width:5;opacity:0.5"/>
+    </svg>
+
+    <!-- <svg viewBox="0 0 100 100">
+        <rect/>
+        <circle/>
+        <polygon/>
+        <line/>
+    </svg> -->
+</body>
+</html>

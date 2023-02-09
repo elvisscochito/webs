@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<!-- alternative: onpageshow -->
+<body onload="welcomeFunc();"> <!-- newContent(); -->
+
+    <script>
+        function welcomeFunc() {
+            alert('Welcome');
+        }
+    </script>
+
+    <div onload="newContent();">
+        <script>
+            function newContent() {
+                document.open();
+                document.write("<p>document.write</p>");
+                document.close();
+            }
+        </script>
+    </div>
+    
+    <noscript><p><strong>Warning: JavaScript is disabled, please enable it to be compatible with this website or your browser doesn't support JavaScript, please try with another browser.</strong></p></noscript>
+    
+    <h1>Useful tags</h1>
+
+    <hr>
+    <h3>Tabindex</h3>
+    <p tabindex="1">1</p>
+    <p tabindex="3">2</p>
+    <p tabindex="2">3</p>
+
+    <hr>
+    <h3>accesskey</h3>
+    <!-- [Keyboard] + accesskey -->
+    <a href="about.html" accesskey="H">Home</a>
+
+    <!-- Keyboard text format -->
+    <p>Mac Safari: <kbd>⇧</kbd> + <kbd>^</kbd> + <kbd>H</kbd></p>
+    <p>Mac Chrome: <kbd>⇧</kbd> + <kbd>^</kbd> + <kbd>⌥</kbd> + <kbd>H</kbd></p>
+
+    <hr>
+
+    <div class="meter">
+        <h3>Meter</h3>
+        <!-- Update with javascript -->
+        <label for="disk-usage">Disk usage</label>
+        <meter id="disk-usage" value="50" min="0" max="100">50%</meter>
+
+        <label for="test-score">Final test</label>
+        <meter id="test-score" min="0" max="1" value=".25">25%</meter>
+
+        <label for="other-meter">Other meter</label>
+        <meter id="other-meter" min="5" max="10" value="8">60%</meter>
+    </div>
+
+    <hr>
+
+    <div class="progressbar">
+        <h3>Progress</h3>
+        <!-- Also update with javascript -->
+        <label for="progressbar">Progressbar</label> 
+        <progress id="progressbar"></progress>
+
+        <label for="upload-progressbar">Upload Progressbar</label> 
+        <!-- min="0" unnecessary -->
+        <progress id="upload-progressbar" name="upload-progressbar" value="70" max="100">70%</progress>
+    </div>
+    
+    <!-- <menuitem> tag is unsupported in html5, however <menu> tag is supported-->
+    <!-- <menu  id="new-context-menu"type="context">
+        <menuitem>Context menu 1</menuitem>
+        <menuitem onclick-"alert('you clicked hello world') ">Hello World</menuitem>
+    </menu> -->
+
+    <!-- https://css-tricks.com/some-hands-on-with-the-html-dialog-element/ -->
+
+    <hr>
+    <h3>Dialog</h3>
+    <p>A quick type of popup window/box</p>
+
+    <!-- Works with Chrome, Edge and Firefox, unsupported by Safari -->
+    <dialog open>
+        <p>Dialog open</p>
+    </dialog>
+
+    <dialog>
+        <p>Dialog close</p>
+    </dialog>
+
+    <p>With HTML and JavaScript mixed:</p>
+    <!-- .show(); and .close(); -->
+    <button onclick="window.dialog.show();">Open dialog with .show();</button>
+    <dialog id="dialog">
+        <p>Dialog opened</p>
+        <button onclick="window.dialog.close();">Close dialog</button>
+    </dialog>
+
+    <!-- .showModal(); -->
+    <button onclick="window.dialogModal.showModal();">Open dialog with .showModal();</button>
+    <dialog id="dialogModal">
+        <p>dialogModal opened</p>
+        <button onclick="window.subDialogModal.showModal();">Open subDialogModal</button>
+        <button onclick="window.dialogModal.close();">Close dialogModal</button>
+    </dialog>
+    <dialog id="subDialogModal">
+        <p>subDialogModal opened</p>
+        <button onclick="window.subDialogModal.close();">Close subDialogModal</button>
+    </dialog>
+
+    <p>With HTML form method="dialog" and JavaScript mixed:</p>
+    <!-- method="dialog" -->
+    <button onclick="window.myDialog.showModal();">Open my dialog</button>
+    <dialog id="myDialog">
+        <p>myDialog opened</p>
+
+        <!-- Works with method="dialog" --> 
+        <form method="dialog">
+            <button>Close with method="dialog"</button>
+        </form>
+    </dialog>
+
+    <p>With HTML and JavaScript scripts</p>
+    <button id="showButton" onclick="showFunc();">Open dialog with JS script function</button>
+
+    <!-- Click in dialog itself or in the background to close -->
+    <dialog id="dialogFunc" onclick="closeFunc();">
+        <p>dialogFunc opened</p>
+        <button id="hideButton" onclick="closeFunc();">Close dialog with JS script function</button>
+    </dialog>
+
+    <script>
+        function showFunc() {
+            console.log("show");
+            alert("show dialog");
+            document.getElementById("dialogFunc").showModal();
+        }
+
+        function closeFunc() {
+            console.log("close");
+            alert("close dialog");
+            document.getElementById("dialogFunc").close();
+        }
+    </script>
+
+    <!-- With id's -->
+    <button id="openDialog">Open dialog</button>
+
+    <dialog id="dialogID">
+        <p>Dialog opened</p>
+        <button id="closeDialog">Close dialog</button>
+    </dialog>
+
+    <script>
+        /* Empty function */
+        (function() {
+            var dialog = document.getElementById("dialogID");
+            document.getElementById("openDialog").onclick = function() {
+                document.getElementById("dialogID").showModal();
+            };
+            document.getElementById("closeDialog").onclick = function() {
+                dialog.close();
+            };
+        })();
+    </script>
+
+    <!-- A better implementation https://tympanus.net/codrops/2021/10/06/how-to-implement-and-style-the-dialog-element/ -->
+
+    <hr>
+
+    <div>
+        <template>
+            <!-- Hidden by default -->
+            <p>This is a template</p>
+        </template>
+
+        <script>
+            /* access template by javascript */
+            const template = document.querySelector('template');
+            /* set visibility */
+            const templateContent = template.content.cloneNode(true);
+            templateContent.querySelector('p').innerText = "Aa";
+            document.body.append(templateContent);
+        </script>
+
+        <ul id="list">
+            <li>
+                <span>Item 1: </span>
+                <span>Content 1</span>
+            </li>
+            <li>
+                <span>Item 2: </span>
+                <span>Content 2</span>
+            </li>
+        </ul>
+
+        <button type="button" id="add-item">Add Item</button>
+
+        <template id="list-item-template">
+            <li>
+                <span class="title">Item: </span>
+                <span class="content">Content</span>
+            </li>
+        </template>
+
+        <script>
+            const template = document.getElementById("list-item-template");
+            const list = document.getElementById("list");
+            const button = document.getElementById("add-item");
+            let itemCount = list.children.length;
+
+            button.addEventListener("click", () => {
+                const item = template.content.cloneNode(true);
+                itemCount ++;
+                item.querySelector(".title").innerText = `Item ${itemCount}: `;
+                item.querySelector(".content").innerText = `Content ${itemCount}`;
+                list.append(item);
+            })
+
+            /* https://blog.webdevsimplified.com/2020-06/template-tag/ */
+        </script>
+    </div>
+</body>
+</html>

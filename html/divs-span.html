@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Divs-span tags</title>
+    <style>
+        /* body { */
+            /* rgb(6,10,11), rbg(1, 5, 10) */
+            /* background-color: white;
+        } */
+        .card-show {
+            background-color: silver;
+            /* background: transparent; */
+            border: 1px solid black;
+            border-radius: .25rem;
+            padding: .5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Divs-span types</h1>
+    </header>
+
+    <main>
+        <hr>
+        <section class="div-tags">
+            <!-- Division (Block-level element) -->
+            <div class="divisor" style="background-color: red">
+                <p>Paragraph inside a div</p>
+            </div>
+        
+            <div class="container" style="background-image: url(desert.jpg)">
+                <p>Paragraph inside a div</p>
+            </div>
+        
+            <div class="box" style="background: yellow url(desert.jpg) fixed repeat cover">
+                <p>Paragraph inside a div</p>
+            </div>
+    
+            <div class="toggle-card">
+                <button type="button" id="toggleButton" onclick="toggle();">Show</button>
+        
+                <div id="card" class="card-show" style="display:none">Card</div>
+    
+                <script>
+    
+                /* https://reactgo.com/change-button-text-javascript/ */
+                    function toggle() {
+                        var card = document.getElementById("card");
+                        const toggleButton = document.getElementById("toggleButton");
+                        
+                        if (card.style.display === "none" && toggleButton.innerText==="Show") {
+                            /* card.style.visibility = "visible" */
+                            card.style.display = "block";
+                            toggleButton.innerText = "Hide";
+                        } else {
+                            /* card.style.visibility = "hidden" */
+                            card.style.display = "none";
+                            toggleButton.innerText = "Show";
+                        }
+                    }
+                </script>
+            </div>
+        </section>
+    
+        <hr>
+        
+        <section class="span-tags">
+            <div class="inline-span">
+                <!-- Span (Inline-level elements) like a div but inline -->
+                <p>Lorem ipsum dolor <span class="inline" style="background-color: red; color:blue"> sit amet consectetur adipisicing </span> elit. Est, animi?</p>
+            </div>
+    
+            <div class="toggle-span">
+                <button type="button" id="toggleSpan" onclick="toggleSpan();">Show</button>
+                <p>Lorem ipsum dolor <span id="inline" class="inline" style="background-color: red; color:blue; display:none"> sit amet consectetur adipisicing </span> elit. Est, animi?</p>
+    
+                <script>
+                    function toggleSpan() {
+                        var inline = document.getElementById("inline");
+                        const toggleSpan = document.getElementById("toggleSpan");
+                        if (inline.style.display === "none" && toggleSpan.innerText==="Show") {
+                            inline.style.display = "block";
+                            toggleSpan.style.display = "Hide";
+                        } else {
+                            inline.style.display = "none";
+                            toggleButton.innerText = "Show";
+                        }
+                    }
+                </script>
+            </div>
+        </section>
+
+        <hr>
+    </main>
+
+    <footer>
+        <p>By Elviro Dominguez Soriano</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map tags</title>
+    <base href="img/" target="_blank"> <!-- also works with an url and target="_blank" attribute -->
+</head>
+<body>
+    <header>
+        <h1>Map types</h1>
+    </header>
+    
+    <main>
+        <hr>
+        
+        <section class="maps">
+            <!-- shape="rect" coords="x1,y1,x2,y2", shape="circle" coords="x1,y1,r", shape="poly" coords="x1,y1,x2,y2,x3,y3,x4,y4" (coords depends on the shape), https://desarrolloweb.com/articulos/753.php -->
+
+            <div class="all-shape-types">
+                <h3>Rect, Circle and Poly</h3>
+                <img src="html-css-js.png" alt="HTML-CSS-JS" title="HTML-CSS-JS" usemap="#html-css-js" width="1080px" height="720px">
+                <map name="html-css-js"> <!-- id="html-css-js" (optional, both attributes must match) -->
+                    <area shape="rect" coords="98,247,296,468" alt="HTML" title="HTML" href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+                    <area shape="circle" coords="535,353,110" alt="CSS" title="CSS" href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+                    <area shape="poly" coords="880,264,974,250,879,467,785,249" alt="JS" title="JS" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+                </map>
+            </div>
+
+            <hr>
+
+            <div class="all-polys">
+                <h3>Poly</h3>
+                <img src="poly.png" alt="poly-shape" title="poly-shape" usemap="#poly-shape" width="360px" height="322px">
+                <map name="poly-shape">
+                    <area shape="poly" coords="177,201,274,146,177,4,80,146" alt="JS" title="JS" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+                    <area shape="poly" coords="177,201,274,146,348,302,177,313" alt="HTML" title="HTML" href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+                    <area shape="poly" coords="177,201,177,313,5,301,80,146" alt="CSS" title="CSS" href="https://developer.mozilla.org/en-US/docs/Web/CSS">
+                </map>
+            </div>
+        </section>
+
+        <hr>
+    </main>
+
+    <footer>
+        <p>By Elviro Dominguez Soriano</p>
+    </footer>
+</body>
+</html>

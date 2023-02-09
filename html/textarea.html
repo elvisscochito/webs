@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Textarea tag</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        .container {
+            width: 500px;
+            margin-top: 100px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Textarea</h1>
+    </header>
+
+    <main>
+        <section class="textarea-tag">
+            <div class="textarea">
+                <h3>Textarea normal</h3>
+                <label for="description">Description</label>
+                <textarea id="description" name="description" placeholder="Optional" rows="5" cols="5" minlength="15" maxlength="30" onpaste="return false;" onselectstart="return false;" style="resize: both"></textarea>
+            </div>
+    
+            <hr>
+    
+            <div class="textarea-count">
+                <h3>Textarea counter</h3>
+                <label for="textarea-counter">Count</label>
+                <textarea id="textarea-counter" class="form-control" rows="5" maxlength="100" onkeyup="count(this);" onpaste="return false;" onselectstart="return false;"></textarea>
+                <span class="text-muted pull-right"><strong>/100</strong></span>
+                <output class="text-muted pull-right" id="count2">100</output>
+                <span class="text-muted pull-right">-</span>
+                <output class="text-muted pull-right" id="count1">0</output>
+            </div>
+    
+            <script>
+                function count(obj) {
+                    var element1 = document.getElementById('count1').innerHTML = obj.value.length;
+    
+                    var element2 = document.getElementById('count2');
+                    
+                    var aux = element2.innerHTML = 100 - obj.value.length;
+                    
+                    if (aux <= 25) {
+                        element2.style.color = 'red';
+                    } else if (aux <= 50) {
+                        element2.style.color = 'orange';
+                    } else if (aux <= 75) {
+                        element2.style.color = 'green';
+                    } else {
+                        element2.style.color = 'gray';
+                    }
+                }
+            </script>
+
+            <!-- <div>
+                <textarea maxlength="100" id="message"></textarea>
+                <span id="counter">0</span>
+                <span><strong>/100</strong> </span>
+            </div>
+    
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const messageEle = document.getElementById('message');
+                    const counterEle = document.getElementById('counter');
+                    const maxLength = messageEle.getAttribute('maxlength');
+                    
+                    counterEle.innerHTML = `0-${maxLength}`;
+    
+                    messageEle.addEventListener('input', function(e) {
+                        const target = e.target;
+                        const currentLength = target.value.length;
+                        const remaining = `${maxLength}` - target.value.length;
+                        counterEle.innerHTML = `${currentLength}-${remaining}`;
+                    });
+                });
+            </script> -->
+        </section>
+
+        <hr>
+    </main>
+
+    <footer>
+        <p>By Elviro Dominguez Soriano</p>
+    </footer>
+</body>
+</html>

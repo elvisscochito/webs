@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select tag</title>
+</head>
+<body>
+    <header>
+        <h1>Select types</h1>
+    </header>
+    
+    <hr>
+
+    <main>
+        <section class="select">
+            <div class="select-selected">
+                <h3>Select selected</h3>
+                <label for="select">Select yout favorite OS</label>
+                <select id="select" name="select">
+                    <option selected>Choose</option>
+                    <option value="windows">Windows</option>
+                    <option value="macos">macOS</option>
+                    <option value="linux">Linux</option>
+                </select>
+            </div>
+        
+            <hr>
+        
+            <div class="select-multiple">
+                <h3>Select multiple</h3>
+                <label for="multipleselect">Multiple select</label>
+                <select id="multipleselect" name="multipleselect" size="5" multiple>
+                    <option value="iphone">iPhone</option>
+                    <option value="ipad">iPad</option>
+                    <option value="mac">Mac</option>
+                    <option value="watch">watch</option>
+                    <option value="homepod">HomePod</option>
+                </select>
+            </div>
+            
+            <hr>
+        
+            <div class="select-optgroup">
+                <h3>Select optgroup</h3>
+                <label for="categories">Select categories</label>
+                <select id="categories" name="categories">
+                    <option selected>Choose</option>
+                    <optgroup label="web">
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="javascript">JavaScript</option>
+                    </optgroup>
+                    <optgroup label="os">
+                        <option value="macos">macOS</option>
+                        <option value="windows">Windows</option>
+                        <option value="linux">Linux</option>
+                    </optgroup>
+                </select>
+            </div>
+        </section>
+
+        <hr>
+    </main>
+
+    <footer>
+        <p>By Elviro Dominguez Soriano</p>
+    </footer>
+</body>
+</html>

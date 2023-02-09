@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <caption>Table caption</caption>
+        <thead>
+            <tr> <!-- tr is for table row -->
+                <th scope="col" scope="row">Name</th>
+                <th scope="col">Item</th>
+                <th scope="col">Description</th> <!-- th is for table header -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Aa</td> <!-- td is for table data (thinks as table cells, nor really columns) -->
+                <td rowspan="2">Aa</td> <!-- Mix rows | -->
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Aa</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Aa</td> <!-- Mix columns _ -->
+                <!-- <td>Aa</td> -->
+            </tr>
+        </tfoot>
+    </table>
+    
+    <table>
+        <caption>Colgroup and col tags</caption>
+        <colgroup>
+            <col style="background-color: gray;">
+            <col span="2" style="background-color: red;">
+            <col style="background-color:yellow">
+        </colgroup>
+        <thead>
+            <tr>
+                <td></td>
+                <th scope="col">Title 1</th>
+                <th scope="col">Title 2</th>
+                <th scope="col">Title 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td rowspan="2">Aa</td>
+                <td>Aa</td>
+                <td>Aa</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">2</th>
+                <td>Aa</td>
+                <td>Aa</td>
+                <td>Aa</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <table>
+        <tr><th>Row one</th><th>Row two</th><th>Row three</th></tr>
+        <tr><td>One</td><td>Two</td><td>Three</td></tr>
+        <tr><td>Four</td><td>Five</td><td>Six</td></tr>
+        <tr><td>Seven</td><td>Eight</td><td>Nine</td></tr>
+    </table>
+
+    <table border="1">
+        <tr>
+            <th>Child's Name: </th><th>Parent's Name: </th>
+        </tr>
+        <tr>
+            <td rowspan="2">Catherine</td><td>Michael McCarthy</td>
+        </tr>
+        <tr>
+            <td>Colleen McCarthy</td>
+        </tr>
+        <tr>
+            <td>Maggie</td><td>Sheila McGee</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Edward</td><td>Catherine Howard</td>
+        </tr>
+        <tr>
+            <td>Jeff Howard</td>
+        </tr>
+    </table>
+</body>
+</html>

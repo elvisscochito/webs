@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Links tag</title>
+    <style>
+        @supports (scroll-behavior: smooth) {
+            html{
+                scroll-behavior: smooth;
+            }
+        }
+
+        html, body {
+            scroll-snap-type: y mandatory;
+        }
+
+        #absolute, #relative, .text, .footer-section {
+            scroll-snap-align: start;
+        }
+    </style>
+    <!-- Safari -->
+    <!-- <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script> -->
+</head>
+<body id="top">
+    <header>
+        <h1>Anchor Hyperlinks</h1>
+    </header>
+
+    <main>
+        <hr>
+
+        <section class="links">
+            <div id="absolute">
+                <h3>Absolute references</h3>
+        
+                <!-- Absolute references (external links) -->
+        
+                <!-- target attribute -->
+        
+                <!-- _blank opens in new tab (default) or window -->
+                <p><a href="https://github.com" target="_blank">GitHub</a></p>
+        
+                <!-- Open in a new tab and in the same tab -->
+                <p><a href="https://github.com" onclick="window.open(this.href)">GitHub</a></p>
+                
+        
+                <!-- Open in a new window -->
+                <p><a href="https://github.com" onclick="window.open('https://github.com', 'newwindow', 'width=300, height=250, resizable=yes, scrollbars=yes'); return false;">GitHub</a></p>
+        
+                <p><a href="about:blank" onclick="window.open('about:blank', 'newwindow', 'width=300, height=250'); return false;">with href</a></p>
+                
+                <a onclick="window.open('about:blank', 'newwindow', 'width=300, height=250'); return false;">without href</a>
+        
+                <!-- _self opens in the same tab (default, unnecessary) -->
+                <a href="https://github.com">GitHub</a>
+                <a href="https://github.com" target="_self">GitHub</a>
+        
+                <iframe src="text.html" name="media"></iframe>
+                <a href="media.html" target="media">Media</a>
+
+                <div>
+                    <!-- Email address -->
+                    <a href="mailto:user@email.com?subject=Contact&body=Hello,%20user:">user@email.com</a>
+                
+                    <!-- Phone-->
+                    <a href="tel:+1234567890">1234567890</a>
+
+                    <!-- Messages -->
+                    <a href="sms://+527773464786">Send me a SMS</a>
+
+                    <a href="imessage://+527773464786">Send me an iMessage</a>
+
+                    <a href="https://wa.me/527773464786">Send me a WhatsApp</a>
+                </div>
+            </div>
+
+            <hr>
+
+            <div id="relative">
+                <h3>Relative references</h3>
+        
+                <!-- Relative references (internal links)-->
+        
+                <!-- Link to a local file in the same folder -->
+                <a href="about.html">About</a>
+        
+                <!-- Link to a local file in a different folder called "docs" -->
+                <a href="docs/docs.html">Documentation</a>
+        
+                <div id="internal">
+                    <h3>Internal links</h3>
+            
+                    <!-- Embedded links -->
+                    <a href="#embedded">Embedded section</a>
+                </div>
+        
+                <div id="images">
+                    <h3>Graphical</h3>
+                    <!-- Images as links -->
+                    <a href="https://unsplash.com">
+                        <img src="desert.jpg" alt="Dunas" title="Dunas" width="250">
+                    </a>
+                </div>
+        
+                <a href="https://unsplash.com">
+                    <img src="https://images.unsplash.com/photo-1639402479478-f5e7881c0ccc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80" alt="Dunas" title="Dunas" width="250">
+                </a>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="text">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed cumque consectetur ab maxime quod rem animi! Sint totam modi, quam fuga id cupiditate accusantium quaerat perferendis, culpa, repellendus aliquam eum facere repellat libero nemo. Fugiat libero, nisi ratione aut optio a nesciunt, nihil, itaque distinctio fugit culpa ad. Nostrum doloribus autem eligendi cumque. Quos, reprehenderit. Quaerat tempore, quo nam dolorem aut delectus veritatis ducimus natus quia, recusandae officia ex, exercitationem eius veniam reiciendis eaque facilis assumenda fugit ea aperiam. Rerum accusantium omnis natus eius soluta aperiam fugiat sequi fuga saepe tempora dignissimos molestiae, quibusdam quidem expedita nihil eveniet perferendis, deleniti error! Doloremque perspiciatis, alias quis ut earum nam enim quasi, laudantium, eum suscipit saepe in blanditiis? Iusto fugit enim suscipit? Exercitationem odit officiis id dolor provident reprehenderit unde temporibus iste, aperiam suscipit accusantium laudantium, cumque nam atque? Voluptas ab, aspernatur explicabo debitis sint cum laborum natus earum possimus sed molestias ratione reprehenderit neque asperiores qui ea corrupti enim! Officiis natus sit cupiditate nisi! Tempora assumenda mollitia excepturi. Accusantium consectetur nobis officia ipsa id architecto nisi pariatur aperiam in provident, error ad doloribus esse quia ex? Illum eum unde commodi incidunt magni expedita odio repellat. Ullam, quos! Natus esse ut odit, id, corrupti voluptatem dicta consequatur dolorum quam a vel mollitia reprehenderit harum doloribus enim ipsum, officia at iure magnam. Sed, ut nesciunt! Officia quis ab ipsa cum reiciendis nihil perferendis nesciunt adipisci quasi doloribus amet odit modi ullam, officiis placeat quidem cumque deserunt magnam commodi. Nesciunt sed modi officiis, veritatis libero eum soluta neque explicabo. Esse impedit officiis, voluptatum architecto, harum at voluptatibus iusto dolorum eius inventore consectetur nihil. Iusto, culpa, porro aut deserunt esse est praesentium ad nulla numquam consequatur vel omnis, nihil temporibus quidem assumenda aliquid earum possimus obcaecati animi perferendis nam suscipit aperiam cupiditate iure! Autem quaerat quibusdam consequatur voluptate harum totam magnam, facere temporibus? Sit possimus, voluptatum, corporis laudantium nobis dolore eaque commodi perspiciatis laboriosam optio atque nihil iure cumque temporibus rem pariatur vel ullam. Amet asperiores distinctio, inventore architecto, ipsa reprehenderit repellat veritatis commodi, iste tempora quisquam. Doloribus enim, nihil nesciunt explicabo corrupti impedit id voluptatum. Eius, laborum animi. Odit dolores quas delectus magni sunt aliquid tempore provident ratione, qui fugit cum itaque inventore quos est blanditiis cupiditate dolorum deleniti vero quo sapiente maiores. Repudiandae, sit! Vitae officiis ex pariatur laborum eligendi officia consequuntur at, veritatis vero sit excepturi molestiae numquam sapiente blanditiis magnam vel nulla modi laboriosam maiores quidem! Recusandae accusantium blanditiis porro perspiciatis adipisci sint consequuntur, totam exercitationem sapiente eveniet enim rem, accusamus esse, officiis aliquid nemo facilis voluptate? Sequi fuga minus unde in ad molestias deserunt. Accusamus suscipit voluptatum perspiciatis deleniti porro deserunt laboriosam error quae. Perspiciatis exercitationem tempore provident quas laudantium ad voluptatem minus et voluptatum mollitia molestiae molestias harum quisquam nemo aliquam id, suscipit animi ex cum nisi est magni. Officiis mollitia quam veniam adipisci architecto molestias maxime maiores, nostrum repellat unde incidunt expedita vitae sunt, provident doloribus rerum reprehenderit at velit eveniet dolores a ipsam labore? Reprehenderit dolores et expedita architecto harum vitae voluptates suscipit incidunt animi minima corporis amet numquam aperiam explicabo ex optio officia libero voluptatem, assumenda accusamus. Voluptatum animi cum mollitia est consequuntur, quam aliquid eaque reprehenderit deleniti. Quos, quia. Sunt incidunt, dolore neque odio perspiciatis possimus placeat obcaecati voluptas aliquam consectetur beatae ea corporis expedita quae sed enim nemo at adipisci nesciunt, praesentium omnis totam repudiandae. Nemo autem dignissimos labore praesentium. Ipsum, sunt minima? Nemo amet minima iure! Consequuntur, enim totam, voluptate ipsum repudiandae ut in quos officia facere beatae eius aperiam nobis reiciendis reprehenderit hic? Dolorum consectetur, magni eaque repudiandae sint ab iste impedit, totam nihil culpa esse fugit doloribus cupiditate natus iusto ratione perferendis accusantium veritatis repellat! Sit soluta exercitationem voluptates corrupti ullam. Pariatur, cum magni! Architecto sunt ad quaerat fugiat eos reprehenderit impedit omnis veniam est modi numquam fugit, magnam autem tempora illo quod amet laboriosam reiciendis. Ad, nihil porro? Ducimus in aliquid quia veniam vel nulla consequatur! Libero tempore aliquid quo voluptatum accusamus odit architecto temporibus ipsum iste fugit ex quasi consequatur illum laudantium eius itaque, reiciendis illo, dicta voluptatem magni facilis magnam quod! Nesciunt laborum voluptas porro ratione fugit tempora dignissimos cupiditate provident ipsam quia quod, voluptatibus eaque quam! Cum hic exercitationem dolorem ea numquam magnam. Possimus nihil architecto veniam molestias rerum odio aliquam eveniet, sapiente temporibus porro tenetur asperiores nesciunt exercitationem, ea omnis reiciendis, libero voluptates eaque. Odit quaerat non expedita quia consequatur officia soluta tempora, vel laborum ullam, harum provident sapiente aut nostrum impedit dolor beatae eaque ipsam! Sequi quam porro modi facilis officiis expedita. Et, modi. Quae a deleniti doloremque non dicta quia magnam veniam dolore repellat natus, in labore vitae obcaecati necessitatibus esse veritatis eos architecto eum facere. Voluptates, facilis officiis porro tempora ipsam ab nobis obcaecati voluptas quibusdam numquam reiciendis, a assumenda harum quisquam debitis veniam recusandae necessitatibus iste ad corporis. Quasi, adipisci cum praesentium impedit eius soluta libero sequi, deleniti itaque perspiciatis repellendus aspernatur autem laboriosam tempora illum delectus eos architecto commodi fuga ad? Dolores, adipisci voluptates eveniet harum omnis aliquam provident aperiam veniam accusantium possimus nisi ullam eos nobis iure eius blanditiis eum praesentium, laudantium molestias numquam atque, at dolorum delectus. Facere accusantium nesciunt ipsam error nihil corporis, mollitia veritatis quia fuga quae reprehenderit rerum officia consequatur nisi cumque assumenda suscipit harum illo sint. Vero tenetur libero tempora ducimus quibusdam eos illo similique quis numquam! Esse aperiam temporibus nostrum nam, sint quos ipsam, molestiae eveniet dolor, ea expedita! Praesentium esse sit rem illum nobis aut perspiciatis doloribus ipsa facere, consectetur ad sunt nihil, itaque deserunt, sed facilis! Quibusdam vitae expedita modi quia vero voluptatibus, eum sed, repellat ratione sapiente et aperiam quo, quos tenetur incidunt aspernatur aut perferendis ut! Sit, neque exercitationem aliquam iure aliquid explicabo modi cupiditate assumenda laudantium deserunt beatae harum eius quod dolores, magni reprehenderit eum fugiat accusamus consequuntur! Ipsa quaerat quas non dolores iure doloribus minima esse, doloremque sint, dignissimos illum facilis dolorum? Sapiente velit sint harum quas. Quam amet officiis at consectetur architecto velit, sed id laudantium doloremque?</p>
+
+            <a href="">Reload the current page</a>
+
+            <a href="#">Reload to top</a>
+
+            <a href="javascript:void(0)">Do nothing</a>
+            
+            <a href="" onclick="return false;">Do nothing too</a>
+
+            <p id="embedded">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi corporis quam, quisquam porro rerum quod praesentium exercitationem, excepturi incidunt, fuga consequatur aliquid. Quidem error sed placeat magnam numquam, nesciunt unde animi sequi pariatur, aspernatur quis non praesentium! Voluptatibus accusantium sunt enim mollitia voluptatem esse vel reiciendis repellat consequatur sequi dignissimos, neque quam fugiat! Voluptatibus nulla aliquam, repellendus et perspiciatis numquam molestiae aperiam illo odio fugit dolores enim quos a, omnis asperiores quidem aliquid consequuntur, autem ipsum eius pariatur animi dicta accusamus at? Maxime labore, asperiores ipsum accusamus suscipit minus ipsam reprehenderit quasi sapiente fugit harum molestiae, deserunt facilis et totam.</p>
+        </section>
+
+        <hr>
+
+        <section class="footer-section">
+            <footer>
+                <!-- embedded links -->
+                <a href="#absolute"><p>Absolute references</p></a>
+                <a href="#relative"><p>Relative references</p></a>
+                <a href="#images"><p>Images as links</p></a>
+                <a href="#internal"><p>Internal links</p></a>
+                <a href="#embedded"><p>Embedded references</p></a>
+                <a href="#top"><p>Back to top</p></a>
+            </footer>
+        </section>
+
+        <hr>
+    </main>
+
+    <footer>
+        <p>By Elviro Dominguez Soriano</p>
+    </footer>
+</body>
+</html>

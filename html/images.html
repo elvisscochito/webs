@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- Chrome -->
+    <link rel="icon" type="image/png" href="favicon.png"/>
+
+    <!-- Safari (apple devices) https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link -->
+    <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png"/>
+</head>
+<body>
+    <main>
+        <!-- Absolute references (link) -->
+        <img src="https://images.unsplash.com/photo-1639402479478-f5e7881c0ccc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80" alt="Image description in case of error" title="Web image" width="300px" height="300px">
+
+        <!-- Relative references (path)-->
+        <!-- The "desert.jpg" file is located in the same folder as the current page -->
+        <img src="desert.jpg" alt="Desert in USA" title="Desert in USA" width="300px" height="300px">
+
+        <!-- The "desert2.jpg" file  is located in the "img" folder in the current folder -->
+        <img src="img/desert2.jpg" alt="Desert in USA" title="Desert in USA" width="300px" height="300px">
+
+        <!-- Just more professional -->
+        <img src="./img/desert2.jpg" alt="Desert in USA" title="Desert in USA" width="300px" height="300px">
+
+        <!-- The "desert4.jpg" file  is located in the folder one level up from the current folder -->
+        <img src="../desert4.jpg" alt="Desert in USA" title="Desert in USA" width="300px" height="300px">
+
+        <!-- The "desert5.jpg" file  is located inside "img" folder in the folder one level up from the current folder -->
+        <img src="../img/desert5.jpg" alt="Desert in USA" title="Desert in USA" width="300px" height="300px">
+
+        <figure>
+            <!-- Default image size -->
+            <img src="vscode.png" alt="VSCode icon" title="VSCode icon">
+            <figcaption>Set default image size</figcaption>
+
+            <!-- Using width in Pixels (The browser will automatically set the height proportionally) -->
+            <img src="vscode.png" alt="VSCode icon" title="VSCode icon" width="500px">
+            <figcaption>Set image size using width in Pixels</figcaption>
+
+            <!-- Using width and height in pixels -->
+            <img src="vscode.png" alt="VSCode icon" title="VSCode icon" width="500px" height="100px">
+            <figcaption>Set skewed image size using both attributes width and height in Pixels</figcaption>
+
+            <!-- Using Percentages (maybe the best option for different windows sizes as desktop or mobile screens, but remember the portage depends on the container and screen sizes, doesn’t necessary on the original picture size) -->
+            <!-- Be precise, short, don’t put the same text content at the image already contains and never skip the alt attribute (but it's ok to leave it empty) -->
+            <img src="vscode.png" alt="VSCode icon" title="VSCode icon" width="50%">
+            <figcaption>Set relative image size using both attributes width and height in percentage</figcaption>
+
+            <a href="https://unsplash.com">
+                <img src="desert.jpg" alt="">
+                <strong>image from unsplash</strong>
+            </a>
+            <a href="javascript:print()">
+                <img src="vscode.png" alt="Print this page">
+            </a>
+
+            <p>
+                <a href="...">
+                    2012 Annual report and accounts
+                    <img src="html5logo.png" alt="HTML" width="10px"> (43KB)
+                </a>, also avalible in
+                <a href="...">
+                    <img src="worddocument.png" alt="Word Document" width="10px"> (254KB)
+                </a>
+                or
+                <a href="...">
+                    <img src="pdfdocument.jpg" alt="PDF" width="10px"> (353KB)
+                </a>
+                format.
+            </p>
+        </figure>
+
+        <!-- LoremFlickr -->
+        <img src="https://loremflickr.com/g/320/240/paris">
+        <img src="https://loremflickr.com/320/240/paris,girl/all">
+        <img src="https://loremflickr.com/320/240?lock=1">
+    </main>
+</body>
+</html>

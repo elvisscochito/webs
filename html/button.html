@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button tag</title>
+</head>
+<body>
+    <header>
+        <h1>Button types</h1>
+    </header>
+
+    <main>
+        <hr>
+
+        <section class="button">
+            
+            <div class="button-button">
+                <h3>Button button</h3>
+                <button type="button" id="button" name="button" value="button" onclick="clicked3();">Button</button>
+            </div>
+
+            <hr>
+
+            <div class="button-submit">
+                <h3>Button submit</h3>
+
+                <!-- action="# or url", method="post" or method="get", enctype="type/pain"-->
+                <form action="" method="" enctype="">
+                    <fieldset>
+                        <legend>Form</legend>
+                        <label for="textSubmit">Text to submit:</label>
+                        <input type="text" id="textSubmit" name="textSubmit" placeholder="Type text">
+                        
+                        <!-- (Default type="submit") -->
+                        <button type="submit" id="submit" name="submit" value="submit" onclick="clicked(event);">Submit</button>          
+                    </fieldset>
+                </form>
+
+                <script>
+                    function clicked(e){
+                        if (!confirm('Are you sure?')){
+                            e.preventDefault();
+                        } else {
+                            alert("Thanks for submit");
+                        }
+                    }
+                </script>
+            </div>
+
+            <hr>
+
+            <div class="button-reset">
+                <h3>Button reset</h3>
+                <form action="" method="" enctype="">
+                    <fieldset>
+                        <legend>Form</legend>
+                        <label for="textReset">Text to reset:</label>
+                        <input type="text" id="textReset" name="textReset" placeholder="Type text">
+                        <button type="reset" id="reset" name="reset" value="reset" onclick="clicked2(event);">Reset</button>
+                    </fieldset>
+                </form>
+
+                <script>
+                    function clicked2(e) {
+                        if (!confirm('Are you sure?')){
+                            e.preventDefault();
+                        }
+                    }
+                </script>  
+            </div>
+        </section>
+
+        <hr>
+    </main>
+
+
+    <footer>
+        <p>By Elviro Dominguez Soriano</p>
+    </footer>
+</body>
+</html>

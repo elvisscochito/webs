@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* id vs class */
+        # {
+
+        }
+
+        .container {
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header</h1>
+    </header>
+    
+    <nav>
+        <!-- List are optional -->
+        <!-- <ul>
+            <li></li>
+        </ul> -->
+        <!-- role="button" https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/button_role -->
+        <a href="home.html" tabindex="1">Home</a>
+        <a href="about.html" tabindex="2">About</a>
+        <a href="contact.html" role="button" tabindex="3">Contact</a>
+        
+        <!-- Invalid by W3C validator -->
+        <!-- <button type="button"><a href="index.html">Index</a></button> -->
+    </nav>
+    
+    <main>
+        <section>
+            <p>Section</p>
+            <div class="container"><h2>Div section</h2></div>
+            <article><h2>Article section</h2></article>
+        </section>
+        <aside><p>Aside</p></aside>
+    </main>
+    
+    <footer><p>Footer</p></footer>
+</body>
+</html>
